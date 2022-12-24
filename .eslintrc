@@ -55,7 +55,6 @@
     }
   ],
   "rules": {
-    // "max-len": ["warn", { "code": 120 }],
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "error",
@@ -65,9 +64,27 @@
       {
         "newlines-between": "always-and-inside-groups",
         "alphabetize": {
-          // "order": "asc",
+          "order": "asc",
           "caseInsensitive": true
         },
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "unknown",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
         "pathGroupsExcludedImportTypes": [
           "react"
         ],

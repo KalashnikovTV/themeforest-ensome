@@ -1,4 +1,10 @@
-import styled, { css, CSSObject, FlattenSimpleInterpolation, SimpleInterpolation } from 'styled-components';
+import styled, {
+  css,
+  CSSObject,
+  DefaultTheme,
+  FlattenSimpleInterpolation,
+  SimpleInterpolation
+} from 'styled-components';
 
 type ObjectMap<T> = { [key: string]: T };
 
@@ -53,7 +59,7 @@ const below = Object.keys(SCREEN_SIZES).reduce(
   {}
 );
 
-export const theme = {
+export const theme: DefaultTheme = {
   above,
   below,
   spaces: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 50, 60, 70, 80],
