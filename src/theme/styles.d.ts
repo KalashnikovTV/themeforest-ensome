@@ -24,9 +24,21 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secondary: string;
-      black: string;
+      tertiary: string;
+      darknessBlue: string;
       darkBlue: string;
-      white: string;
+      lightBlue: string;
+      black: string;
+      grey: string;
+      lightGray: string;
+      red: string;
+    };
+
+    shadows: {
+      darknessBlue: string;
+      darkBlue: string;
+      lightBlue: string;
+      grey: string;
       lightGray: string;
     };
   }

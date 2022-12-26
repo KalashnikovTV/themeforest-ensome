@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@services/*": ["./src/services/*"],
@@ -13,6 +12,7 @@
       "@types/*": ["./src/types/*"],
       "@store/*": ["./src/store/*"],
       "@mocks/*": ["./src/mocks/*"],
+      "@router/*": ["./src/router/*"],
     }
   }
 }

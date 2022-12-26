@@ -12,13 +12,14 @@ export default createGlobalStyle`
   *::before,
   *::after {
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+    margin: ${({ theme }): number => theme.spaces[0]}px;
+    padding: ${({ theme }): number => theme.spaces[0]}px;
   }
 
   body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif; // add after check figma
+    margin: ${({ theme }): number => theme.spaces[0]}px;
+    font-family: 'Manrope', sans-serif;
+    font-size: ${({ theme }): number => theme.fontSizes[1]}px;
   }
 
   ul {

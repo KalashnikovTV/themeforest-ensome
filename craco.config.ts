@@ -22,6 +22,7 @@ module.exports = {
       '@types': path.resolve(__dirname, 'src/types'),
       '@store': path.resolve(__dirname, 'src/store'),
       '@mocks': path.resolve(__dirname, 'src/mocks'),
+      '@router': path.resolve(__dirname, 'src/router'),
     },
   },
 };
