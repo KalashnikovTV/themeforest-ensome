@@ -1,8 +1,8 @@
-export interface IBoundaryProps {
+export interface IErrorBoundaryProps {
   children?: React.ReactNode;
-  FallbackComponent: React.FC<IBoundaryState>;
+  FallbackComponent: React.FC<IErrorBoundaryState>;
 }
 
-export interface IBoundaryState {
+export interface IErrorBoundaryState {
   error: Error | null;
 }

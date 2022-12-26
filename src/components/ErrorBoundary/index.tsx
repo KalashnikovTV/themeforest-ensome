@@ -1,13 +1,13 @@
 import { Component, ReactNode } from 'react';
 
-import { IBoundaryProps, IBoundaryState } from './interfaces';
+import { IErrorBoundaryProps, IErrorBoundaryState } from './interfaces';
 
-export default class ErrorBoundary extends Component<IBoundaryProps, IBoundaryState> {
-  public state: IBoundaryState = {
+export default class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> {
+  public state: IErrorBoundaryState = {
     error: null
   };
 
-  public static getDerivedStateFromError(error: Error): IBoundaryState {
+  public static getDerivedStateFromError(error: Error): IErrorBoundaryState {
     return { error };
   }
 

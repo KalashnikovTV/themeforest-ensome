@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-import { IBoundaryState } from '@components/ErrorBoundary/interfaces';
+import { IErrorBoundaryState } from '@components/ErrorBoundary/interfaces';
 
 import { Wrapper, Button } from './styles';
 
-const ErrorFallback: React.FC<IBoundaryState> = ({ error }: IBoundaryState) => {
+const ErrorFallback: React.FC<IErrorBoundaryState> = ({ error }: IErrorBoundaryState) => {
   const navigate = useNavigate();
 
   const handleOnClick = (): void => {
