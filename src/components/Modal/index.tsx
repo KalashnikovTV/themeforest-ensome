@@ -18,9 +18,10 @@ export const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, chil
     return () => {
       document.body.removeChild(el);
     };
-  });
+  }, []);
 
   const handleOnClickOverlay = (): void => {
+    document.body.style.overflow = 'initial';
     setIsOpenModal(false);
   };
 
@@ -28,7 +29,11 @@ export const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, chil
     e.stopPropagation();
   };
 
-  if (!isOpenModal) return null;
+  if (!isOpenModal) {
+    return null;
+  } else {
+    document.body.style.overflow = 'hidden';
+  }
 
   return createPortal(
     <>

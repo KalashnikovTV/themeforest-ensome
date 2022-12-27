@@ -9,7 +9,7 @@ export const ModalOverlay = styled('div')`
   position: fixed;
   right: ${({ theme }): number => theme.spaces[0]}px;
   top: ${({ theme }): number => theme.spaces[0]}px;
-  z-index: 5;
+  z-index: 1;
 `;
 
 export const ModalContent = styled('div')`
@@ -20,5 +20,5 @@ export const ModalContent = styled('div')`
   position: fixed;
   top: ${({ theme }): number => theme.maxWidth[0] / 2}%;
   transform: ${({ theme }): string => `translate(-${theme.maxWidth[0] / 2}%, -${theme.maxWidth[0] / 2}%)`};
-  z-index: 5;
+  z-index: 1;
 `;
