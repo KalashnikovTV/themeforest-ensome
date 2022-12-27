@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       <Container>
         <Wrapper>
           <LogoLink isWhiteLogo={false} />
-          <NavBar withMobileBurgerMenu={true} />
+          <NavBar withMobileBurgerMenu={true} direction="row" />
 
           <Button onClick={handleOnClickButton}>Watch the demo</Button>
           <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>

@@ -5,12 +5,28 @@ export const Wrapper = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: ${({ theme }): number => theme.maxWidth[0]}vh;
+  min-height: ${({ theme }): number => theme.maxWidth[11]}px;
 `;
 
-export const Title = styled('h1')``;
+export const TitleError = styled('h1')`
+  color: ${({ theme }): string => theme.colors.red};
+  font-size: ${({ theme }): number => theme.fontSizes[9]}px;
+  font-weight: ${({ theme }): number => theme.fontWeight[7]};
+  line-height: ${({ theme }): number => theme.lineHeight[17]}px;
+  text-align: center;
+`;
 
-export const CodeMessage = styled('pre')``;
+export const Paragraph = styled('p')`
+  color: ${({ theme }): string => theme.colors.black};
+  font-size: ${({ theme }): number => theme.fontSizes[8]}px;
+  font-weight: ${({ theme }): number => theme.fontWeight[7]};
+  line-height: ${({ theme }): number => theme.lineHeight[15]}px;
+  text-align: center;
+`;
+
+export const Span = styled('span')`
+  color: ${({ theme }): string => theme.colors.primary};
+`;
 
 //TODO вынести в отдельный компонент
 export const Button = styled('button')`

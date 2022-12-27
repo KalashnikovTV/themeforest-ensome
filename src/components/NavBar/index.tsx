@@ -1,14 +1,19 @@
 import { memo } from 'react';
 
-import { AppRoutes } from '@constants/app-routes';
+import { NAVIGATE_LINKS } from '@constants/navigate-links';
 
 import { INavBarProps } from './interfaces';
 
-import { BurgerButton, BurgerRow, Link, NavBarList, NavBarItem } from './styles';
+import { BurgerButton, BurgerRow, Link, NavBarList, NavBarItem, Nav } from './styles';
 
-const NavBar: React.FC<INavBarProps> = ({ withMobileBurgerMenu = false }: INavBarProps) => {
+const NavBar: React.FC<INavBarProps> = ({
+  routes = NAVIGATE_LINKS,
+  withMobileBurgerMenu = false,
+  direction = 'row',
+  isActiveLinkColor = true
+}: INavBarProps) => {
   return (
-    <nav>
+    <Nav>
       {withMobileBurgerMenu && (
         <BurgerButton>
           <BurgerRow />
@@ -16,34 +21,18 @@ const NavBar: React.FC<INavBarProps> = ({ withMobileBurgerMenu = false }: INavBa
           <BurgerRow />
         </BurgerButton>
       )}
-      <NavBarList>
-        {/* TODO вынести в константу линки */}
-        <NavBarItem>
-          <Link to={AppRoutes.home}>Home</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.blog}>Blog</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.solutions}>Solutions</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.contacts}>Contacts</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.ourTeam}>Our Team</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.services}>Services</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.aboutUs}>About Us</Link>
-        </NavBarItem>
-        <NavBarItem>
-          <Link to={AppRoutes.faqs}>FAQs</Link>
-        </NavBarItem>
+      <NavBarList direction={direction}>
+        {routes.map(({ name, path }, index) => {
+          return (
+            <NavBarItem key={`${name}-${index}`} direction={direction}>
+              <Link to={path} direction={direction} isActiveLinkColor={isActiveLinkColor}>
+                {name}
+              </Link>
+            </NavBarItem>
+          );
+        })}
       </NavBarList>
-    </nav>
+    </Nav>
   );
 };
 

@@ -7,5 +7,6 @@ export enum AppRoutes {
   ourTeam = '/our-team',
   faqs = '/faqs',
   solutions = '/solutions',
-  elements = '/elements'
+  elements = '/elements',
+  notFound = '/not-found'
 }

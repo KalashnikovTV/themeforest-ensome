@@ -1,3 +1,11 @@
+import { AppRoutes } from '@constants/app-routes';
+
 export interface INavBarProps {
-  withMobileBurgerMenu: boolean;
+  routes?: {
+    name: string;
+    path: AppRoutes;
+  }[];
+  withMobileBurgerMenu?: boolean;
+  direction: 'column' | 'row';
+  isActiveLinkColor?: boolean;
 }

@@ -23,7 +23,7 @@ export const Button = styled('button')`
   padding: ${({ theme }): number => theme.spaces[5]}px ${({ theme }): number => theme.spaces[6]}px
     ${({ theme }): number => theme.spaces[5]}px ${({ theme }): number => theme.spaces[18]}px;
   position: relative;
-  transition: all 0.4s;
+  transition: all 0.3s;
   width: ${({ theme }): number => theme.maxWidth[0]}%;
 
   &:hover,
