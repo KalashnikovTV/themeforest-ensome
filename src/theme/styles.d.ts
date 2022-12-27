@@ -32,6 +32,7 @@ declare module 'styled-components' {
       grey: string;
       lightGray: string;
       red: string;
+      white: string;
     };
 
     shadows: {

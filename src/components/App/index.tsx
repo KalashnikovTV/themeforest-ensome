@@ -4,7 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import AppRouter from '@components/AppRouter';
 import ErrorBoundary from '@components/ErrorBoundary';
 import ErrorFallback from '@components/ErrorFallback';
-import Header from '@components/Header/Header';
+import Footer from '@components/Footer';
+import Header from '@components/Header';
 import GlobalStyles from '@theme/globalStyles';
 import { theme } from '@theme/theme';
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <Header />
           <AppRouter />
+          <Footer />
         </ErrorBoundary>
       </ThemeProvider>
     </BrowserRouter>

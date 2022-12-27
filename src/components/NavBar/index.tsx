@@ -1,38 +1,50 @@
+import { memo } from 'react';
+
 import { AppRoutes } from '@constants/app-routes';
 
-import { Link } from './styles';
+import { INavBarProps } from './interfaces';
 
-const NavBar: React.FC = () => {
+import { BurgerButton, BurgerRow, Link, NavBarList, NavBarItem } from './styles';
+
+const NavBar: React.FC<INavBarProps> = ({ withMobileBurgerMenu = false }: INavBarProps) => {
   return (
     <nav>
-      <ul>
-        <li>
+      {withMobileBurgerMenu && (
+        <BurgerButton>
+          <BurgerRow />
+          <BurgerRow />
+          <BurgerRow />
+        </BurgerButton>
+      )}
+      <NavBarList>
+        {/* TODO вынести в константу линки */}
+        <NavBarItem>
           <Link to={AppRoutes.home}>Home</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.blog}>Blog</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.solutions}>Solutions</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.contacts}>Contacts</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.ourTeam}>Our Team</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.services}>Services</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.aboutUs}>About Us</Link>
-        </li>
-        <li>
+        </NavBarItem>
+        <NavBarItem>
           <Link to={AppRoutes.faqs}>FAQs</Link>
-        </li>
-      </ul>
+        </NavBarItem>
+      </NavBarList>
     </nav>
   );
 };
 
-export default NavBar;
+export default memo(NavBar);

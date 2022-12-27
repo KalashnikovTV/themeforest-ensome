@@ -20,6 +20,7 @@ export default createGlobalStyle`
     margin: ${({ theme }): number => theme.spaces[0]}px;
     font-family: 'Manrope', sans-serif;
     font-size: ${({ theme }): number => theme.fontSizes[1]}px;
+    line-height: ${({ theme }): number => theme.lineHeight[6]}px;
   }
 
   ul {

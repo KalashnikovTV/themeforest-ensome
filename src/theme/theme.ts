@@ -66,9 +66,9 @@ export const theme: DefaultTheme = {
   fontSizes: [12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 56, 66, 72],
   fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   maxWidth: [100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200],
-  lineHeight: [12, 14, 18, 22, 26, 30, 34, 38, 42, 44, 48, 52, 56, 60, 64, 68, 72],
+  lineHeight: [12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 34, 38, 42, 44, 48, 52, 56, 60, 64, 68, 72],
   colors: {
-    primary: 'rgb(24, 95, 225)',
+    primary: 'rgb(24, 92, 255)',
     secondary: 'rgb(0, 43, 78)',
     tertiary: 'rgb(240, 249, 255)',
     darknessBlue: 'rgb(207, 59, 24)',
@@ -77,7 +77,8 @@ export const theme: DefaultTheme = {
     black: 'rgb(41, 45, 51)',
     grey: 'rgb(148, 151, 161)',
     lightGray: 'rgb(241, 246, 250)',
-    red: 'rgb(193, 64, 64)'
+    red: 'rgb(193, 64, 64)',
+    white: 'rgb(255, 255, 255)'
   },
   shadows: {
     darknessBlue: '0px 12px 30px rgba(24, 92, 255, 0.18)',
