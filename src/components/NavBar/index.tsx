@@ -4,13 +4,12 @@ import { NAVIGATE_LINKS } from '@constants/navigate-links';
 
 import { INavBarProps } from './interfaces';
 
-import { BurgerButton, BurgerRow, Link, NavBarList, NavBarItem, Nav } from './styles';
+import { BurgerButton, BurgerRow, Link, List, Item, Nav } from './styles';
 
 const NavBar: React.FC<INavBarProps> = ({
   routes = NAVIGATE_LINKS,
   withMobileBurgerMenu = false,
-  direction = 'row',
-  isActiveLinkColor = true
+  direction = 'row'
 }: INavBarProps) => {
   return (
     <Nav>
@@ -21,17 +20,21 @@ const NavBar: React.FC<INavBarProps> = ({
           <BurgerRow />
         </BurgerButton>
       )}
-      <NavBarList direction={direction}>
-        {routes.map(({ name, path }, index) => {
+      <List direction={direction}>
+        {routes.map(({ id, name, path }) => {
           return (
-            <NavBarItem key={`${name}-${index}`} direction={direction}>
-              <Link to={path} direction={direction} isActiveLinkColor={isActiveLinkColor}>
+            <Item key={id} direction={direction}>
+              <Link
+                to={path}
+                direction={direction}
+                className={({ isActive }): string | undefined => (isActive ? 'active' : undefined)}
+              >
                 {name}
               </Link>
-            </NavBarItem>
+            </Item>
           );
         })}
-      </NavBarList>
+      </List>
     </Nav>
   );
 };

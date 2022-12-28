@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 
           <Column className="service-link">
             <Title>Service</Title>
-            <NavBar routes={SERVICE_LINKS} withMobileBurgerMenu={true} direction="column" isActiveLinkColor={false} />
+            <NavBar routes={SERVICE_LINKS} withMobileBurgerMenu={true} direction="column" />
           </Column>
 
           <Column className="contact-link">

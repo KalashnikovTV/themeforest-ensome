@@ -28,7 +28,6 @@ export const Span = styled('span')`
   color: ${({ theme }): string => theme.colors.primary};
 `;
 
-//TODO вынести в отдельный компонент
 export const Button = styled('button')`
   background-color: ${({ theme }): string => theme.colors.primary};
   border: none;

@@ -59,13 +59,18 @@ const below = Object.keys(SCREEN_SIZES).reduce(
   {}
 );
 
+//TODO удалить наглядные пометки индекса, после завершения всех работ.
 export const theme: DefaultTheme = {
   above,
-  below,
+  below, //0, 1, 2, 3, 4, 5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
   spaces: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 50, 60, 70, 80],
+  //          0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12
   fontSizes: [12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 56, 66, 72],
+  //            0,   1,   2,   3,   4,   5,   6,   7,   8
   fontWeight: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+  //          0,   1,   2,   3,   4,   5,   6,   7,   8,   9,   10, 11,  12,  13,  14,  15,  16,   17,   18,   19
   maxWidth: [100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200],
+  //           0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
   lineHeight: [12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 34, 38, 42, 44, 48, 52, 56, 60, 64, 68, 72],
   colors: {
     primary: 'rgb(24, 92, 255)',
@@ -91,7 +96,7 @@ export const theme: DefaultTheme = {
 
 export const Container = styled('div')`
   margin: ${theme.spaces[0]}px auto;
-  max-width: ${theme.maxWidth[18] + theme.spaces[5]}px;
+  max-width: ${theme.maxWidth[18] + theme.spaces[16]}px;
   padding: ${theme.spaces[0]}px ${theme.spaces[8]}px;
   position: relative;
 `;

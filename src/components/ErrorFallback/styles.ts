@@ -12,7 +12,6 @@ export const Title = styled('h1')``;
 
 export const CodeMessage = styled('pre')``;
 
-//TODO вынести в отдельный компонент
 export const Button = styled('button')`
   background-color: ${({ theme }): string => theme.colors.primary};
   border: none;

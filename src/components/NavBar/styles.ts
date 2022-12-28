@@ -11,8 +11,8 @@ export const Link = styled(NavLink)<INavBarProps>`
   transition: all 0.3s;
 
   &.active {
-    color: ${({ theme, direction, isActiveLinkColor }): string =>
-      !isActiveLinkColor ? 'inherit' : direction === 'row' ? theme.colors.secondary : theme.colors.white};
+    color: ${({ theme, direction }): string => (direction === 'row' ? theme.colors.secondary : theme.colors.white)};
+    font-weight: ${({ theme }): number => theme.fontWeight[5]};
   }
 
   &:hover,
@@ -38,12 +38,12 @@ export const BurgerRow = styled('div')`
 
 export const Nav = styled('nav')``;
 
-export const NavBarList = styled('ul')<INavBarProps>`
+export const List = styled('ul')<INavBarProps>`
   display: flex;
   flex-direction: ${({ direction }): string => direction};
 `;
 
-export const NavBarItem = styled('li')<INavBarProps>`
+export const Item = styled('li')<INavBarProps>`
   margin-left: ${({ theme, direction }): number => (direction === 'row' ? theme.spaces[11] : theme.spaces[0])}px;
   margin-top: ${({ theme, direction }): number => (direction === 'row' ? theme.spaces[0] : theme.spaces[6])}px;
 

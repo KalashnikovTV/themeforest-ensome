@@ -10,9 +10,9 @@ const FooterPolicy: React.FC = () => {
       <Paragraph>Ensome, © {getCurrentYear} All Rights Reserved</Paragraph>
 
       <LinkPolicyWrapper>
-        {POLICY_LINKS.map(({ name, path }, index) => {
+        {POLICY_LINKS.map(({ id, name, path }) => {
           return (
-            <LinkPolicy key={`${name}-${index}`} to={path}>
+            <LinkPolicy key={id} to={path}>
               {name}
             </LinkPolicy>
           );

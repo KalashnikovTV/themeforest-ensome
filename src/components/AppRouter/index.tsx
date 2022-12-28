@@ -9,8 +9,8 @@ const AppRouter: React.FC = () => {
   return (
     <Main>
       <Routes>
-        {publicRoutes.map((route) => {
-          return <Route key={route.path} path={route.path} element={route.element} />;
+        {publicRoutes.map(({ id, path, element }) => {
+          return <Route key={id} path={path} element={element} />;
         })}
         <Route path="*" element={<Navigate to={AppRoutes.home} replace />} />
       </Routes>

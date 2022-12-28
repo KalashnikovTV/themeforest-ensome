@@ -33,6 +33,9 @@ export const Button = styled('button')`
 
   &::before {
     background-image: url('/images/icon-play.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     content: '';
     display: flex;
     height: ${({ theme }): number => theme.spaces[12]}px;

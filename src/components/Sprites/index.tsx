@@ -1,20 +1,20 @@
 import { SOCIAL_LINKS } from '@constants/social-links';
 
-import { SpritesItem, SpritesLink, SpritesList } from './styles';
+import { Item, Link, List, Image } from './styles';
 
 const Sprites: React.FC = () => {
   return (
-    <SpritesList>
-      {SOCIAL_LINKS.map(({ path, href, alt }, index) => {
+    <List>
+      {SOCIAL_LINKS.map(({ id, path, href, alt }) => {
         return (
-          <SpritesItem key={`${path}-${index}`}>
-            <SpritesLink href={href} target="_blank" rel="noreferrer noopener nofollow">
-              <img src={path} alt={alt} />
-            </SpritesLink>
-          </SpritesItem>
+          <Item key={id}>
+            <Link href={href} target="_blank" rel="noreferrer noopener nofollow">
+              <Image src={path} alt={alt} />
+            </Link>
+          </Item>
         );
       })}
-    </SpritesList>
+    </List>
   );
 };
 

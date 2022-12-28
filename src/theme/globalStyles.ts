@@ -21,6 +21,7 @@ export default createGlobalStyle`
     font-family: 'Manrope', sans-serif;
     font-size: ${({ theme }): number => theme.fontSizes[1]}px;
     line-height: ${({ theme }): number => theme.lineHeight[6]}px;
+    letter-spacing: -0.2px;
   }
 
   ul {

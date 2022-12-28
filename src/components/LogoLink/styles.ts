@@ -4,7 +4,7 @@ import { ILogoLinkProps } from './interfaces';
 
 export const Image = styled.img.attrs(({ isWhiteLogo }: ILogoLinkProps): unknown => ({
   src: isWhiteLogo ? '/images/logo-white.svg' : '/images/logo-blue.svg',
-  alt: isWhiteLogo ? 'logo-white' : 'logo-blue'
+  alt: isWhiteLogo ? 'Logo-white' : 'Logo-blue'
 }))`
   border: none;
   height: ${({ theme }): number => theme.spaces[23]}px;
