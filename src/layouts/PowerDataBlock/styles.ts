@@ -48,6 +48,7 @@ export const LinkLearn = styled(Link)`
   font-weight: ${({ theme }): number => theme.fontWeight[5]};
   height: ${({ theme }): number => theme.maxWidth[0] + theme.spaces[2]}px;
   justify-content: center;
+  line-height: ${({ theme }): number => theme.lineHeight[6]}px;
   position: absolute;
   transition: all 0.3s;
   width: ${({ theme }): number => theme.maxWidth[0] + theme.spaces[2]}px;

@@ -4,11 +4,6 @@ module.exports = {
   eslint: {
     enable: false,
   },
-  // babel: {
-  //   loaderOptions: {
-  //     ignore: [''],
-  //   },
-  // },
   webpack: {
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),
@@ -24,6 +19,7 @@ module.exports = {
       '@store': path.resolve(__dirname, 'src/store'),
       '@mocks': path.resolve(__dirname, 'src/mocks'),
       '@router': path.resolve(__dirname, 'src/router'),
+      '@forms': path.resolve(__dirname, 'src/forms'),
     },
   },
 };

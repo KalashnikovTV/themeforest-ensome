@@ -20,7 +20,7 @@ export const Image = styled.img.attrs({
 `;
 
 export const WrapperContent = styled('div')`
-  max-width: ${({ theme }): number => theme.maxWidth[12] + theme.spaces[5]}px;
+  max-width: ${({ theme }): number => theme.maxWidth[12] + theme.spaces[20]}px;
   width: ${({ theme }): number => theme.maxWidth[0]}%;
 `;
 
@@ -49,6 +49,7 @@ export const LinkLearn = styled(Link)`
   font-weight: ${({ theme }): number => theme.fontWeight[6]};
   height: ${({ theme }): number => theme.spaces[24] + theme.spaces[2]}px;
   justify-content: center;
+  line-height: ${({ theme }): number => theme.lineHeight[6]}px;
   margin-top: ${({ theme }): number => theme.spaces[15]}px;
   max-width: ${({ theme }): number => theme.maxWidth[4] + theme.spaces[5]}px;
   transition: all 0.3s;

@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               <LinkInfo href="mailto:support@aazztech.com" rel="noreferrer noopener nofollow">
                 ensome@info.co.us
               </LinkInfo>
-              <LinkInfo href="tel:16012015580" rel="noreferrer noopener nofollow">
+              <LinkInfo href="tel:+16012015580" rel="noreferrer noopener nofollow">
                 +1 601-201-5580
               </LinkInfo>
               <Paragraph>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</Paragraph>
