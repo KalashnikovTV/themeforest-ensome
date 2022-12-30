@@ -3,24 +3,11 @@ import { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'r
 import { SliderOptions } from '@constants/slider-options';
 
 import { ISliderProps } from './interfaces';
-import {
-  Wrapper,
-  SliderContainer,
-  SliderTrack,
-  SliderButtons,
-  SliderButton,
-  TestimonialItem,
-  TestimonialHeader,
-  TestimonialContent,
-  TestimonialTitle,
-  TestimonialSubtitle,
-  TestimonialImage,
-  TestimonialText
-} from './styles';
+import { Wrapper, SliderContainer, SliderTrack, SliderButtons, SliderButton } from './styles';
 
 const Slider: React.FC<ISliderProps> = ({
   items,
-  itemsCardAs,
+  renderItem,
   slidesToShow,
   slidesToScroll,
   slidesGap
@@ -63,22 +50,8 @@ const Slider: React.FC<ISliderProps> = ({
     <Wrapper>
       <SliderContainer ref={containerRef}>
         <SliderTrack position={position} gap={slidesGap}>
-          {items?.map(({ id, path, alt, title, subtitle, text }) => {
-            // TODO придумать что-то, чтобы разделить и вынести карточки (передавая itemWidth)
-            if (itemsCardAs === 'testimonials') {
-              return (
-                <TestimonialItem key={id} itemWidth={itemWidth}>
-                  <TestimonialHeader>
-                    <TestimonialImage src={path} alt={alt} />
-                    <TestimonialContent>
-                      <TestimonialTitle>{title}</TestimonialTitle>
-                      <TestimonialSubtitle>{subtitle}</TestimonialSubtitle>
-                    </TestimonialContent>
-                  </TestimonialHeader>
-                  <TestimonialText>{text}</TestimonialText>
-                </TestimonialItem>
-              );
-            }
+          {items?.map((item) => {
+            return renderItem(item, itemWidth);
           })}
         </SliderTrack>
       </SliderContainer>

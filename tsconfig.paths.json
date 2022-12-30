@@ -15,6 +15,7 @@
       "@mocks/*": ["./src/mocks/*"],
       "@router/*": ["./src/router/*"],
       "@forms/*": ["./src/forms/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
     }
   }
 }

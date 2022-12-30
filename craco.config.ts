@@ -20,6 +20,7 @@ module.exports = {
       '@mocks': path.resolve(__dirname, 'src/mocks'),
       '@router': path.resolve(__dirname, 'src/router'),
       '@forms': path.resolve(__dirname, 'src/forms'),
+      '@interfaces': path.resolve(__dirname, 'src/interfaces'),
     },
   },
 };

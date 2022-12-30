@@ -19,9 +19,8 @@ const Home: React.FC = () => {
       <SuccessBlock />
       <BenefitsBlock />
       <TestimonialsBlock
-        title="Testimonials"
+        titleText="Testimonials"
         items={TESTIMONIALS_DATA}
-        itemsCardAs="testimonials"
         slidesToShow={SliderOptions.slidesToShow}
         slidesToScroll={SliderOptions.slidesToScroll}
         slidesGap={SliderOptions.slidesGap}

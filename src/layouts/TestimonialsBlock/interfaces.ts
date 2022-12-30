@@ -1,16 +1,13 @@
+import { ISliderItem } from '@components/Slider/interfaces';
+
 export interface ITestimonialsBlockProps {
-  title: string;
-  items: {
-    id: number;
-    path: string;
-    alt: string;
-    title: string;
-    subtitle: string;
-    text: string;
-    date?: string;
-  }[];
-  itemsCardAs: 'blog' | 'testimonials';
+  titleText: string;
+  items: ISliderItem[];
   slidesToShow: number;
   slidesToScroll: number;
   slidesGap: number;
+}
+
+export interface ITestimonialsItemProps {
+  itemWidth: number;
 }
