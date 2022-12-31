@@ -6,7 +6,7 @@ import { ISliderRenderItemProps } from '@components/Slider/interfaces';
 import { AppRoutes } from '@constants/app-routes';
 import { Container } from '@theme/theme';
 
-import { ITestimonialsBlockProps } from './interfaces';
+import { IBlogMiniBlockProps } from './interfaces';
 
 import {
   WrapperContent,
@@ -19,16 +19,17 @@ import {
   SliderItemTitle,
   SliderItemSubtitle,
   SliderItemImage,
-  SliderItemText
+  SliderItemText,
+  SliderItemLinkReadMore
 } from './styles';
 
-const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
+const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
   titleText,
   items,
   slidesToShow,
   slidesToScroll,
   slidesGap
-}: ITestimonialsBlockProps) => {
+}: IBlogMiniBlockProps) => {
   return (
     <Wrapper>
       <Container>
@@ -41,24 +42,27 @@ const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
           slidesToShow={slidesToShow}
           slidesToScroll={slidesToScroll}
           slidesGap={slidesGap}
-          withBoxShadow={true}
+          withBoxShadow={false}
           renderItem={({ id, path, alt, title, subtitle, text }, itemWidth): ReactElement<ISliderRenderItemProps> => {
             return (
               <SliderItem key={id} itemWidth={itemWidth}>
                 <SliderItemHeader>
-                  <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                  <SliderItemLink to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
                     <SliderItemImage src={path} alt={alt} />
                   </SliderItemLink>
                   <SliderItemContent>
+                    <SliderItemSubtitle>{subtitle}</SliderItemSubtitle>
                     <SliderItemTitle>
-                      <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                      <SliderItemLink to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
                         {title}
                       </SliderItemLink>
                     </SliderItemTitle>
-                    <SliderItemSubtitle>{subtitle}</SliderItemSubtitle>
                   </SliderItemContent>
                 </SliderItemHeader>
                 <SliderItemText>{text}</SliderItemText>
+                <SliderItemLinkReadMore to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
+                  Read more
+                </SliderItemLinkReadMore>
               </SliderItem>
             );
           }}
@@ -68,4 +72,4 @@ const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
   );
 };
 
-export default memo(TestimonialsBlock);
+export default memo(BlogMiniBlock);

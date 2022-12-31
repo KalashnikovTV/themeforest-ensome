@@ -7,7 +7,6 @@ export interface ISliderItem {
   title: string;
   subtitle: string;
   text: string;
-  date?: string;
 }
 
 export interface ISliderProps {
@@ -16,6 +15,11 @@ export interface ISliderProps {
   slidesToShow: number;
   slidesToScroll: number;
   slidesGap: number;
+  withBoxShadow: boolean;
+}
+
+export interface ISliderContainerProps {
+  withBoxShadow: boolean;
 }
 
 export interface ISliderTrackProps {

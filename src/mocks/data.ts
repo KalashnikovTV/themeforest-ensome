@@ -72,3 +72,55 @@ export const TESTIMONIALS_DATA = [
     text: '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.”'
   }
 ];
+
+export const BLOG_DATA = [
+  {
+    id: 1,
+    path: '/images/blog-news-1.png',
+    alt: 'ISO 13485 compliance of medical devices photo',
+    title: 'ISO 13485 compliance of medical devices',
+    subtitle: '22 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  },
+  {
+    id: 2,
+    path: '/images/blog-news-2.png',
+    alt: 'Business analysis helps you  in finance photo',
+    title: 'Business analysis helps you  in finance',
+    subtitle: '23 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  },
+  {
+    id: 3,
+    path: '/images/blog-news-3.png',
+    alt: '5 web portal examples your business can learn from photo',
+    title: '5 web portal examples your business can learn from',
+    subtitle: '24 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  },
+  // TODO поменять повт. данные ниже, когда будет страница Blog
+  {
+    id: 4,
+    path: '/images/blog-news-1.png',
+    alt: 'ISO 13485 compliance of medical devices photo',
+    title: 'ISO 13485 compliance of medical devices',
+    subtitle: '22 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  },
+  {
+    id: 5,
+    path: '/images/blog-news-2.png',
+    alt: 'Business analysis helps you  in finance photo',
+    title: 'Business analysis helps you  in finance',
+    subtitle: '23 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  },
+  {
+    id: 6,
+    path: '/images/blog-news-3.png',
+    alt: '5 web portal examples your business can learn from photo',
+    title: '5 web portal examples your business can learn from',
+    subtitle: '24 June 2022',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
+  }
+];

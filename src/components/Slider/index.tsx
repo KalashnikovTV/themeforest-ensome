@@ -10,7 +10,8 @@ const Slider: React.FC<ISliderProps> = ({
   renderItem,
   slidesToShow,
   slidesToScroll,
-  slidesGap
+  slidesGap,
+  withBoxShadow
 }: ISliderProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -48,7 +49,7 @@ const Slider: React.FC<ISliderProps> = ({
 
   return (
     <Wrapper>
-      <SliderContainer ref={containerRef}>
+      <SliderContainer ref={containerRef} withBoxShadow={withBoxShadow}>
         <SliderTrack position={position} gap={slidesGap}>
           {items?.map((item) => {
             return renderItem(item, itemWidth);
@@ -57,8 +58,8 @@ const Slider: React.FC<ISliderProps> = ({
       </SliderContainer>
 
       <SliderButtons>
-        <SliderButton onClick={handleClickPrevButton} disabled={handleDisabledPrevButton} />
-        <SliderButton onClick={handleClickNextButton} disabled={handleDisabledNextButton} />
+        <SliderButton onClick={handleClickPrevButton} disabled={handleDisabledPrevButton} title="Prev button" />
+        <SliderButton onClick={handleClickNextButton} disabled={handleDisabledNextButton} title="Next button" />
       </SliderButtons>
     </Wrapper>
   );

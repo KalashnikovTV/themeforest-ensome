@@ -14,11 +14,12 @@ export const privateRoutes = [{}];
 export const publicRoutes = [
   { id: 1, path: `${AppRoutes.home}`, element: <Home /> },
   { id: 2, path: `${AppRoutes.blog}`, element: <Blog /> },
-  { id: 3, path: `${AppRoutes.solutions}`, element: <Solutions /> },
-  { id: 4, path: `${AppRoutes.contacts}`, element: <Contacts /> },
-  { id: 5, path: `${AppRoutes.ourTeam}`, element: <OurTeam /> },
-  { id: 6, path: `${AppRoutes.services}`, element: <Services /> },
-  { id: 7, path: `${AppRoutes.aboutUs}`, element: <AboutUs /> },
-  { id: 8, path: `${AppRoutes.faqs}`, element: <FaQs /> },
-  { id: 9, path: `${AppRoutes.notFound}`, element: <NotFound /> }
+  { id: 3, path: `${AppRoutes.blog}/:id`, element: <Blog /> },
+  { id: 4, path: `${AppRoutes.solutions}`, element: <Solutions /> },
+  { id: 5, path: `${AppRoutes.contacts}`, element: <Contacts /> },
+  { id: 6, path: `${AppRoutes.ourTeam}`, element: <OurTeam /> },
+  { id: 7, path: `${AppRoutes.services}`, element: <Services /> },
+  { id: 8, path: `${AppRoutes.aboutUs}`, element: <AboutUs /> },
+  { id: 9, path: `${AppRoutes.faqs}`, element: <FaQs /> },
+  { id: 10, path: `${AppRoutes.notFound}`, element: <NotFound /> }
 ];

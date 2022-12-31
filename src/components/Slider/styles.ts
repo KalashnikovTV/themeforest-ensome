@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { ISliderTrackProps } from './interfaces';
+import { ISliderContainerProps, ISliderTrackProps } from './interfaces';
 
 export const Wrapper = styled('div')`
   position: relative;
 `;
 
-export const SliderContainer = styled('div')`
-  box-shadow: ${({ theme }): string => theme.shadows.lightGray};
+export const SliderContainer = styled('div')<ISliderContainerProps>`
+  box-shadow: ${({ theme, withBoxShadow }): string => (withBoxShadow ? theme.shadows.lightGray : 'initial')};
   overflow-x: hidden;
 `;
 
