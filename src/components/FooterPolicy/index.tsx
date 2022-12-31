@@ -12,7 +12,7 @@ const FooterPolicy: React.FC = () => {
       <LinkPolicyWrapper>
         {POLICY_LINKS.map(({ id, name, path }) => {
           return (
-            <LinkPolicy key={id} to={path}>
+            <LinkPolicy key={id} to={path} title={`Go to ${path}`}>
               {name}
             </LinkPolicy>
           );

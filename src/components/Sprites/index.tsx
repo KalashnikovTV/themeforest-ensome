@@ -8,7 +8,7 @@ const Sprites: React.FC = () => {
       {SOCIAL_LINKS.map(({ id, path, href, alt }) => {
         return (
           <Item key={id}>
-            <Link href={href} target="_blank" rel="noreferrer noopener nofollow">
+            <Link href={href} target="_blank" rel="noreferrer noopener nofollow" title={`Go to ${href}`}>
               <Image src={path} alt={alt} />
             </Link>
           </Item>

@@ -3,6 +3,7 @@ import { memo, ReactElement } from 'react';
 import Slider from '@components/Slider';
 
 import { ISliderRenderItemProps } from '@components/Slider/interfaces';
+import { AppRoutes } from '@constants/app-routes';
 import { Container } from '@theme/theme';
 
 import { ITestimonialsBlockProps } from './interfaces';
@@ -11,13 +12,14 @@ import {
   WrapperContent,
   Wrapper,
   Title,
-  TestimonialItem,
-  TestimonialHeader,
-  TestimonialContent,
-  TestimonialTitle,
-  TestimonialSubtitle,
-  TestimonialImage,
-  TestimonialText
+  SliderItem,
+  SliderItemHeader,
+  SliderItemContent,
+  SliderItemLink,
+  SliderItemTitle,
+  SliderItemSubtitle,
+  SliderItemImage,
+  SliderItemText
 } from './styles';
 
 const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
@@ -41,16 +43,22 @@ const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
           slidesGap={slidesGap}
           renderItem={({ id, path, alt, title, subtitle, text }, itemWidth): ReactElement<ISliderRenderItemProps> => {
             return (
-              <TestimonialItem key={id} itemWidth={itemWidth}>
-                <TestimonialHeader>
-                  <TestimonialImage src={path} alt={alt} />
-                  <TestimonialContent>
-                    <TestimonialTitle>{title}</TestimonialTitle>
-                    <TestimonialSubtitle>{subtitle}</TestimonialSubtitle>
-                  </TestimonialContent>
-                </TestimonialHeader>
-                <TestimonialText>{text}</TestimonialText>
-              </TestimonialItem>
+              <SliderItem key={id} itemWidth={itemWidth}>
+                <SliderItemHeader>
+                  <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                    <SliderItemImage src={path} alt={alt} />
+                  </SliderItemLink>
+                  <SliderItemContent>
+                    <SliderItemTitle>
+                      <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                        {title}
+                      </SliderItemLink>
+                    </SliderItemTitle>
+                    <SliderItemSubtitle>{subtitle}</SliderItemSubtitle>
+                  </SliderItemContent>
+                </SliderItemHeader>
+                <SliderItemText>{text}</SliderItemText>
+              </SliderItem>
             );
           }}
         />

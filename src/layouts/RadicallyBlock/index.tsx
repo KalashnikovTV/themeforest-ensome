@@ -12,7 +12,9 @@ const RadicallyBlock: React.FC = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </Paragraph>
-        <LinkLearn to={AppRoutes.solutions}>Learn more</LinkLearn>
+        <LinkLearn to={AppRoutes.solutions} title={`Go to ${AppRoutes.solutions}`}>
+          Learn more
+        </LinkLearn>
       </WrapperContent>
     </Wrapper>
   );

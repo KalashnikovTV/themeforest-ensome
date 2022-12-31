@@ -8,6 +8,6 @@ export interface ITestimonialsBlockProps {
   slidesGap: number;
 }
 
-export interface ITestimonialsItemProps {
+export interface ISliderItemProps {
   itemWidth: number;
 }

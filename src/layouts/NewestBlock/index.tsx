@@ -17,7 +17,9 @@ const NewestBlock: React.FC = () => {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
             aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
           </Paragraph>
-          <LinkDiscover to={AppRoutes.solutions}>Discover more</LinkDiscover>
+          <LinkDiscover to={AppRoutes.solutions} title={`Go to ${AppRoutes.solutions}`}>
+            Discover more
+          </LinkDiscover>
         </WrapperContent>
       </Wrapper>
     </Container>

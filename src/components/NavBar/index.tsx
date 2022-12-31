@@ -28,6 +28,7 @@ const NavBar: React.FC<INavBarProps> = ({
                 to={path}
                 direction={direction}
                 className={({ isActive }): string | undefined => (isActive ? 'active' : undefined)}
+                title={`Go to ${path}`}
               >
                 {name}
               </Link>

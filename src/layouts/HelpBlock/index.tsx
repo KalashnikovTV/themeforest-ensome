@@ -13,7 +13,9 @@ const HelpBlock: React.FC = () => {
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
             ea commodi.
           </Paragraph>
-          <LinkContact to={AppRoutes.contacts}>Contact Us</LinkContact>
+          <LinkContact to={AppRoutes.contacts} title={`Go to ${AppRoutes.contacts}`}>
+            Contact Us
+          </LinkContact>
         </WrapperContent>
       </Container>
     </Wrapper>

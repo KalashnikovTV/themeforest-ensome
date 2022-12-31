@@ -8,7 +8,7 @@ import { Image } from './styles';
 
 const LogoLink: React.FC<ILogoLinkProps> = ({ isWhiteLogo = false }: ILogoLinkProps) => {
   return (
-    <NavLink to={AppRoutes.home}>
+    <NavLink to={AppRoutes.home} title={`Go to ${AppRoutes.home}`}>
       <Image isWhiteLogo={isWhiteLogo} />
     </NavLink>
   );
