@@ -22,7 +22,7 @@ const Slider: React.FC<ISliderProps> = ({
     if (containerRef.current) {
       setItemWidth(Math.round((containerRef.current.clientWidth - slidesGap * (slidesToShow - 1)) / slidesToShow));
     }
-  }, [containerRef, slidesGap, slidesToShow]);
+  }, [slidesGap, slidesToShow]);
 
   const itemsCount = useMemo(() => items?.length, [items]);
 

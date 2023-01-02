@@ -12,7 +12,7 @@ const ButtonGroups: React.FC<IButtonGroupsProps> = ({ items, numActiveIndex = 0,
     if (firstActiveButtonRef.current) {
       firstActiveButtonRef.current.click();
     }
-  }, [firstActiveButtonRef]);
+  }, []);
 
   const handleButtonClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>): void => {
