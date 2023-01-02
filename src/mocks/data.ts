@@ -124,3 +124,42 @@ export const BLOG_DATA = [
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...'
   }
 ];
+
+export const PRICING_DATA = [
+  {
+    id: 1,
+    title: 'Free trial',
+    price: '$00',
+    durations: ['Mo', 'Yr'],
+    possibilities: ['For small teams – 5 users', 'Community support']
+  },
+  {
+    id: 2,
+    title: 'Lite',
+    price: '$99',
+    durations: ['Mo', 'Yr'],
+    possibilities: ['For small teams – 15 users', 'Individual support', 'Individual data – 60GB']
+  },
+  {
+    id: 3,
+    title: 'Basic',
+    price: '$00',
+    durations: ['Mo', 'Yr'],
+    possibilities: ['For big teams – 30 users', 'Individual support', 'Individual data – 120GB', 'Advanced permissions']
+  },
+  {
+    id: 4,
+    title: 'For enterprises',
+    price: 'Custom',
+    durations: ['Mo', 'Yr'],
+    possibilities: [
+      'Unlimited team members',
+      'Individual support',
+      'Unlimited Individual data',
+      'Advanced permissions',
+      'Data history',
+      'Audit log',
+      'All functions included'
+    ]
+  }
+];

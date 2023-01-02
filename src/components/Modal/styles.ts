@@ -14,6 +14,7 @@ export const ModalOverlay = styled('div')`
 
 export const ModalContent = styled('div')`
   background-color: ${({ theme }): string => theme.colors.white};
+  border-radius: ${({ theme }): number => theme.spaces[4]}px;
   left: ${({ theme }): number => theme.maxWidth[0] / 2}%;
   padding: ${({ theme }): number => theme.spaces[5]}px ${({ theme }): number => theme.spaces[5]}px
     ${({ theme }): number => theme.spaces[1]}px ${({ theme }): number => theme.spaces[5]}px;

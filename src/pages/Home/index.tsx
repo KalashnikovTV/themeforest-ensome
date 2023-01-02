@@ -4,6 +4,7 @@ import BlogMiniBlock from '@layouts/BlogMiniBlock';
 import HelpBlock from '@layouts/HelpBlock';
 import NewestBlock from '@layouts/NewestBlock';
 import PowerDataBlock from '@layouts/PowerDataBlock';
+import PricingBlock from '@layouts/PricingBlock';
 import RadicallyBlock from '@layouts/RadicallyBlock';
 import SubscribeBlock from '@layouts/SubscribeBlock';
 import SuccessBlock from '@layouts/SuccessBlock';
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
         slidesToScroll={SliderOptions.slidesToScroll}
         slidesGap={SliderOptions.slidesGap}
       />
-
+      <PricingBlock />
       <BlogMiniBlock
         titleText="Our blog"
         items={BLOG_DATA}

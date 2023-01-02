@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import LogoLink from '@components/LogoLink';
-import { Modal } from '@components/Modal';
+import Modal from '@components/Modal';
 import NavBar from '@components/NavBar';
 import { VideoDialog } from '@components/VideoDialog';
 import { Container } from '@theme/theme';
