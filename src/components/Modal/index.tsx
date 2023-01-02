@@ -21,7 +21,7 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
   }, []);
 
   const handleOnClickOverlay = (): void => {
-    document.body.style.overflow = 'initial';
+    document.body.style.overflowY = 'initial';
     setIsOpenModal(false);
   };
 
@@ -32,7 +32,7 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
   if (!isOpenModal) {
     return null;
   } else {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
   }
 
   return createPortal(

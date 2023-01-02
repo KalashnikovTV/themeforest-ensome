@@ -22,6 +22,8 @@ export default createGlobalStyle`
     font-size: ${({ theme }): number => theme.fontSizes[1]}px;
     line-height: ${({ theme }): number => theme.lineHeight[6]}px;
     letter-spacing: -0.2px;
+    /* margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden; */
   }
 
   ul {
