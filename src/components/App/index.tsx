@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from 'styled-components';
 
 import AppRouter from '@components/AppRouter';
@@ -14,7 +15,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-
+        <ToastContainer />
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <Header />
           <AppRouter />

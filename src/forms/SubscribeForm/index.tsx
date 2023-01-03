@@ -1,11 +1,12 @@
 import { sendForm } from '@emailjs/browser';
+
 import { useFormik } from 'formik';
 import { useRef, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+
+import { showToast } from '@utils/showToast';
 
 import { defaultInitialValues as initialValues } from './constants';
 
-import { IToastOptions } from './interfaces';
 import { Wrapper, Form, InputWrapper, Button, Input, Span } from './styles';
 import { validationSchema } from './validationSchema';
 
@@ -13,19 +14,6 @@ const SubscribeForm: React.FC = () => {
   const [isDisabledButton, setIsDisabledButton] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
-
-  const showToast = ({ type, message }: IToastOptions): void => {
-    toast[type](message, {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored'
-    });
-  };
 
   const formik = useFormik({
     initialValues,
@@ -63,7 +51,6 @@ const SubscribeForm: React.FC = () => {
           {formik.touched.email && Boolean(formik.values.email) && <Span>{formik.errors.email}</Span>}
         </InputWrapper>
       </Form>
-      <ToastContainer />
     </Wrapper>
   );
 };
