@@ -47,7 +47,7 @@ const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, handleCl
 
   return (
     <>
-      {isLoading && <Loading />}
+      {isLoading && <Loading width={50} height={50} />}
       <PayPalButtons {...buttonConfig} />
     </>
   );
