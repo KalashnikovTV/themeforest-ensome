@@ -5,6 +5,8 @@ import Modal from '@components/Modal';
 
 import PricingPossibilities from '@components/PricingPossibilities';
 
+import PayPalForm from '@forms/PayPalForm';
+import { transformPrice } from '@utils/transformPrice';
 import { transformPriceDuration } from '@utils/transformPriceDuration';
 
 import { IPricingCardItemProps } from './interfaces';
@@ -28,6 +30,10 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
 
   const handleOnClickButton = (): void => {
     setIsOpenModal(true);
+  };
+
+  const handleCloseModal = (): void => {
+    setIsOpenModal(false);
   };
 
   return (
@@ -57,7 +63,11 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
           </PricingModalTitle>
           <PricingPossibilities possibilities={possibilities} />
 
-          <h1>PAYPAL tyt bydet</h1>
+          <PayPalForm
+            price={transformPrice(price)}
+            description={`Plan: ${title}. Duration: ${transformPriceDuration(selectedDuration)}`}
+            handleCloseModal={handleCloseModal}
+          />
         </PricingModalWrapper>
       </Modal>
     </>

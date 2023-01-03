@@ -143,7 +143,7 @@ export const PRICING_DATA = [
   {
     id: 3,
     title: 'Basic',
-    price: '$00',
+    price: '$199',
     durations: ['Mo', 'Yr'],
     possibilities: ['For big teams – 30 users', 'Individual support', 'Individual data – 120GB', 'Advanced permissions']
   },

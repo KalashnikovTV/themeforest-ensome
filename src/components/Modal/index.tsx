@@ -21,7 +21,6 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
   }, []);
 
   const handleOnClickOverlay = (): void => {
-    document.body.style.overflowY = 'initial';
     setIsOpenModal(false);
   };
 
@@ -30,6 +29,7 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
   };
 
   if (!isOpenModal) {
+    document.body.style.overflowY = 'initial';
     return null;
   } else {
     document.body.style.overflowY = 'hidden';
