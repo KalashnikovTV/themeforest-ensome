@@ -1,5 +1,11 @@
+import PageHeaderBlock from '@layouts/PageHeaderBlock';
+
 const AboutUs: React.FC = () => {
-  return <>AboutUs page</>;
+  return (
+    <>
+      <PageHeaderBlock title="About Us" />
+    </>
+  );
 };
 
 export default AboutUs;
