@@ -55,7 +55,7 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
             if (
               !breadcrumb ||
               breadcrumb.breadcrumb.length === 0 ||
-              (omitIndexList && omitIndexList.find((value) => value === index))
+              (omitIndexList && omitIndexList.find((value) => value !== index))
             ) {
               return;
             }
@@ -63,12 +63,14 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
             return (
               <Item key={`${breadcrumb.path}-${index}`}>
                 <LinkBreadcrumb to={breadcrumb.path} $isActiveItem={index === breadcrumbs.length - 1}>
-                  {convertBreadcrumb(
-                    breadcrumb.breadcrumb,
-                    labelsToUppercase,
-                    replaceCharacterList,
-                    transformLastLabel
-                  )}
+                  {index === breadcrumbs.length - 1
+                    ? convertBreadcrumb(
+                        breadcrumb.breadcrumb,
+                        labelsToUppercase,
+                        replaceCharacterList,
+                        transformLastLabel
+                      )
+                    : convertBreadcrumb(breadcrumb.breadcrumb, labelsToUppercase, replaceCharacterList)}
                 </LinkBreadcrumb>
               </Item>
             );

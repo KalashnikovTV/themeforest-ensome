@@ -10,19 +10,20 @@ const PageHeaderBlock: React.FC<IPageHeaderBlockProps> = ({
   title: titleBlock,
   subtitle,
   description = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.',
-  isDetailed = false
+  isDetailed = false,
+  omitIndexList = null
 }: IPageHeaderBlockProps) =>
   !isDetailed ? (
     <Wrapper>
       <Container>
         <Title>{titleBlock}</Title>
-        <Breadcrumbs />
+        <Breadcrumbs transformLastLabel={(): string => titleBlock} omitIndexList={omitIndexList} />
       </Container>
     </Wrapper>
   ) : (
     <WrapperDetailed>
       <Container>
-        {subtitle && <Breadcrumbs transformLastLabel={(): string => subtitle} />}
+        {subtitle && <Breadcrumbs transformLastLabel={(): string => subtitle} omitIndexList={omitIndexList} />}
         <WrapperContent>
           <Subtitle>{subtitle}</Subtitle>
           <Title>{titleBlock}</Title>
