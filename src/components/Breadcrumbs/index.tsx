@@ -8,7 +8,7 @@ import { Item, LinkBreadcrumb, List, Nav } from './styles';
 import { convertBreadcrumb } from './utils';
 
 const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
-  rootLabel = AppRoutes.home?.slice(1),
+  rootLabel = AppRoutes.home?.replace('/', ''),
   omitRootLabel = false,
   labelsToUppercase = true,
   replaceCharacterList = [{ from: '-', to: ' ' }],
