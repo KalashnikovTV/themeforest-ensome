@@ -7,9 +7,14 @@ const getPathFromUrl = (url: string): string => {
 export const convertBreadcrumb = (
   title: string,
   toUpperCase: boolean | null,
-  replaceCharacterList: CharacterMap[] | null
+  replaceCharacterList: CharacterMap[] | null,
+  transformLabel?: ((title: string) => string) | null
 ): string => {
   let transformedTitle = getPathFromUrl(title);
+
+  if (transformLabel) {
+    return transformLabel(transformedTitle);
+  }
 
   if (replaceCharacterList) {
     for (let i = 0; i < replaceCharacterList.length; i++) {

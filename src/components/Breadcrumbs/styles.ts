@@ -28,10 +28,10 @@ export const Item = styled('li')`
 `;
 
 export const LinkBreadcrumb = styled(Link)<IBreadcrumbItemProps>`
-  color: ${({ isActiveItem, theme }): string => (isActiveItem ? theme.colors.secondary : theme.colors.grey)};
-  font-weight: ${({ isActiveItem, theme }): number => (isActiveItem ? theme.fontWeight[5] : theme.fontWeight[4])};
+  color: ${({ $isActiveItem, theme }): string => ($isActiveItem ? theme.colors.secondary : theme.colors.grey)};
+  font-weight: ${({ $isActiveItem, theme }): number => ($isActiveItem ? theme.fontWeight[5] : theme.fontWeight[4])};
   line-height: ${({ theme }): number => theme.lineHeight[6]}px;
-  pointer-events: ${({ isActiveItem }): string => (isActiveItem ? 'none' : 'auto')};
+  pointer-events: ${({ $isActiveItem }): string => ($isActiveItem ? 'none' : 'auto')};
   transition: all 0.3s;
 
   &:hover,

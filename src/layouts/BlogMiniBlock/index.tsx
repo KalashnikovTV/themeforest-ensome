@@ -1,5 +1,6 @@
 import { memo, ReactElement } from 'react';
 
+import LinkReadMore from '@components/LinkReadMore';
 import Slider from '@components/Slider';
 
 import { ISliderRenderItemProps } from '@components/Slider/interfaces';
@@ -19,8 +20,7 @@ import {
   SliderItemTitle,
   SliderItemSubtitle,
   SliderItemImage,
-  SliderItemText,
-  SliderItemLinkReadMore
+  SliderItemText
 } from './styles';
 
 const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
@@ -60,9 +60,7 @@ const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
                   </SliderItemContent>
                 </SliderItemHeader>
                 <SliderItemText>{text}</SliderItemText>
-                <SliderItemLinkReadMore to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
-                  Read more
-                </SliderItemLinkReadMore>
+                <LinkReadMore path={`${AppRoutes.blog}/${id}`} />
               </SliderItem>
             );
           }}

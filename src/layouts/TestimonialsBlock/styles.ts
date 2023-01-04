@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ISliderItemProps } from './interfaces';
 
 export const Wrapper = styled('div')`
+  padding-bottom: ${({ theme }): number => theme.spaces[27] + theme.spaces[20]}px;
   padding-top: ${({ theme }): number => theme.spaces[27] + theme.spaces[20]}px;
 `;
 

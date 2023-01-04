@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled('div')`
-  padding-top: ${({ theme }): number => theme.spaces[27] + theme.spaces[20]}px;
-`;
+export const Wrapper = styled('div')``;
 
 export const WrapperContent = styled('div')`
   margin-bottom: ${({ theme }): number => theme.spaces[24]}px;

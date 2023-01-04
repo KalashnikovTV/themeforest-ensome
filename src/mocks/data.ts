@@ -1,3 +1,5 @@
+import { AppRoutes } from '@constants/app-routes';
+
 export const TESTIMONIALS_DATA = [
   {
     id: 1,
@@ -161,5 +163,56 @@ export const PRICING_DATA = [
       'Audit log',
       'All functions included'
     ]
+  }
+];
+
+export const SOLUTIONS_DATA = [
+  {
+    id: 1,
+    path: '/images/solutions-database.svg',
+    alt: 'Data integration icon',
+    title: 'Data integration',
+    text: 'Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.',
+    link: AppRoutes.contacts
+  },
+  {
+    id: 2,
+    path: '/images/solutions-calendar.svg',
+    alt: 'Data integration icon',
+    title: 'Data integration',
+    text: 'Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.',
+    link: AppRoutes.contacts
+  },
+  {
+    id: 3,
+    path: '/images/solutions-clipboard.svg',
+    alt: 'Big data icon',
+    title: 'Big data',
+    text: 'Big data infrastructure setup and support.; big data quality and security management; big data capture, analysis and reporting.',
+    link: AppRoutes.contacts
+  },
+  {
+    id: 4,
+    path: '/images/solutions-data.svg',
+    alt: 'Data warehousing icon',
+    title: 'Data warehousing',
+    text: 'The process of constructing and using a data warehouse. Data warehouse and data marts design and implementation.',
+    link: AppRoutes.contacts
+  },
+  {
+    id: 5,
+    path: '/images/solutions-whisker.svg',
+    alt: 'Self-service BI icon',
+    title: 'Self-service BI',
+    text: 'Business intelligence; data analytics infrastructure design and implementation; scheduled analytics querying and reporting.',
+    link: AppRoutes.contacts
+  },
+  {
+    id: 6,
+    path: '/images/solutions-pie.svg',
+    alt: 'Data visualization icon',
+    title: 'Data visualization',
+    text: 'Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)',
+    link: AppRoutes.contacts
   }
 ];

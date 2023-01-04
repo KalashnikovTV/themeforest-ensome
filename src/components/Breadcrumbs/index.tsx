@@ -12,7 +12,8 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
   omitRootLabel = false,
   labelsToUppercase = true,
   replaceCharacterList = [{ from: '-', to: ' ' }],
-  omitIndexList = null
+  omitIndexList = null,
+  transformLabel = null
 }: IBreadcrumbsProps) => {
   const location = useLocation();
 
@@ -43,7 +44,7 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
       <List>
         {!omitRootLabel && (
           <Item>
-            <LinkBreadcrumb to={AppRoutes.home} isActiveItem={false}>
+            <LinkBreadcrumb to={AppRoutes.home} $isActiveItem={false}>
               {convertBreadcrumb(rootLabel || AppRoutes.home?.slice(1), labelsToUppercase, replaceCharacterList)}
             </LinkBreadcrumb>
           </Item>
@@ -61,8 +62,8 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
 
             return (
               <Item key={`${breadcrumb.path}-${index}`}>
-                <LinkBreadcrumb to={breadcrumb.path} isActiveItem={index === breadcrumbs.length - 1}>
-                  {convertBreadcrumb(breadcrumb.breadcrumb, labelsToUppercase, replaceCharacterList)}
+                <LinkBreadcrumb to={breadcrumb.path} $isActiveItem={index === breadcrumbs.length - 1}>
+                  {convertBreadcrumb(breadcrumb.breadcrumb, labelsToUppercase, replaceCharacterList, transformLabel)}
                 </LinkBreadcrumb>
               </Item>
             );

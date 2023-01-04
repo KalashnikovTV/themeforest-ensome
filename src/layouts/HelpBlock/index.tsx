@@ -1,7 +1,8 @@
+import LinkMore from '@components/LinkMore';
 import { AppRoutes } from '@constants/app-routes';
 import { Container } from '@theme/theme';
 
-import { WrapperContent, LinkContact, Paragraph, Title, Wrapper } from './styles';
+import { WrapperContent, Paragraph, Title, Wrapper } from './styles';
 
 const HelpBlock: React.FC = () => {
   return (
@@ -13,9 +14,9 @@ const HelpBlock: React.FC = () => {
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
             ea commodi.
           </Paragraph>
-          <LinkContact to={AppRoutes.contacts} title={`Go to ${AppRoutes.contacts}`}>
+          <LinkMore path={AppRoutes.contacts} width={190} height={54}>
             Contact Us
-          </LinkContact>
+          </LinkMore>
         </WrapperContent>
       </Container>
     </Wrapper>
