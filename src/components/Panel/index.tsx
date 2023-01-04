@@ -1,5 +1,7 @@
 import { memo, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
+import { ACCORDION_PANEL_HEIGHT } from '@constants/accordion-options';
+
 import { IPanelProps } from './interfaces';
 import { Content, Wrapper, Label, Paragraph } from './styles';
 
@@ -8,7 +10,7 @@ const Panel: React.FC<IPanelProps> = (props: IPanelProps) => {
 
   const panelRef = useRef<HTMLDivElement | null>(null);
 
-  const [panelHeight, setPanelHeight] = useState(0);
+  const [panelHeight, setPanelHeight] = useState(ACCORDION_PANEL_HEIGHT);
 
   useLayoutEffect(() => {
     if (panelRef.current) {
@@ -24,7 +26,7 @@ const Panel: React.FC<IPanelProps> = (props: IPanelProps) => {
       <Label role="tab" isActivePanel={isActive} onClick={(): void => toggleTab(index)}>
         {label}
       </Label>
-      <Content ref={panelRef} panelHeight={isActive ? panelHeight : 0} aria-hidden={!isActive}>
+      <Content ref={panelRef} panelHeight={isActive ? panelHeight : ACCORDION_PANEL_HEIGHT} aria-hidden={!isActive}>
         <Paragraph isActivePanel={isActive}>{content}</Paragraph>
       </Content>
     </Wrapper>
