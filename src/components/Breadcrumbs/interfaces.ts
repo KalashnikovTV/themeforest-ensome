@@ -9,7 +9,7 @@ export interface IBreadcrumbsProps {
   labelsToUppercase?: boolean | null;
   replaceCharacterList?: Array<CharacterMap> | null;
   omitIndexList?: Array<number> | null;
-  transformLabel?: ((title: string) => string) | null;
+  transformLastLabel?: ((title: string) => string) | null;
 }
 
 export interface IBreadcrumb {

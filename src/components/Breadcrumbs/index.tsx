@@ -13,7 +13,7 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
   labelsToUppercase = true,
   replaceCharacterList = [{ from: '-', to: ' ' }],
   omitIndexList = null,
-  transformLabel = null
+  transformLastLabel = null
 }: IBreadcrumbsProps) => {
   const location = useLocation();
 
@@ -63,7 +63,12 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
             return (
               <Item key={`${breadcrumb.path}-${index}`}>
                 <LinkBreadcrumb to={breadcrumb.path} $isActiveItem={index === breadcrumbs.length - 1}>
-                  {convertBreadcrumb(breadcrumb.breadcrumb, labelsToUppercase, replaceCharacterList, transformLabel)}
+                  {convertBreadcrumb(
+                    breadcrumb.breadcrumb,
+                    labelsToUppercase,
+                    replaceCharacterList,
+                    transformLastLabel
+                  )}
                 </LinkBreadcrumb>
               </Item>
             );

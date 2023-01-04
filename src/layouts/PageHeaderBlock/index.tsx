@@ -22,7 +22,7 @@ const PageHeaderBlock: React.FC<IPageHeaderBlockProps> = ({
   ) : (
     <WrapperDetailed>
       <Container>
-        {subtitle && <Breadcrumbs transformLabel={(): string => subtitle} />}
+        {subtitle && <Breadcrumbs transformLastLabel={(): string => subtitle} />}
         <WrapperContent>
           <Subtitle>{subtitle}</Subtitle>
           <Title>{titleBlock}</Title>
