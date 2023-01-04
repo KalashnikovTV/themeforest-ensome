@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import LinkReadMore from '@components/LinkReadMore';
 
 import { ISolutionsCardItemProps } from './interfaces';
@@ -16,4 +18,4 @@ const SolutionsCardItem: React.FC<ISolutionsCardItemProps> = (props: ISolutionsC
   );
 };
 
-export default SolutionsCardItem;
+export default memo(SolutionsCardItem);

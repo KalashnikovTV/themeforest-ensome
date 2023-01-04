@@ -168,7 +168,6 @@ export const PRICING_DATA = [
 
 export const SOLUTIONS_DATA = [
   {
-    id: 1,
     path: '/images/solutions-database.svg',
     alt: 'Data integration icon',
     title: 'Data integration',
@@ -176,7 +175,6 @@ export const SOLUTIONS_DATA = [
     link: AppRoutes.contacts
   },
   {
-    id: 2,
     path: '/images/solutions-calendar.svg',
     alt: 'Data integration icon',
     title: 'Data integration',
@@ -184,7 +182,6 @@ export const SOLUTIONS_DATA = [
     link: AppRoutes.contacts
   },
   {
-    id: 3,
     path: '/images/solutions-clipboard.svg',
     alt: 'Big data icon',
     title: 'Big data',
@@ -192,7 +189,6 @@ export const SOLUTIONS_DATA = [
     link: AppRoutes.contacts
   },
   {
-    id: 4,
     path: '/images/solutions-data.svg',
     alt: 'Data warehousing icon',
     title: 'Data warehousing',
@@ -200,7 +196,6 @@ export const SOLUTIONS_DATA = [
     link: AppRoutes.contacts
   },
   {
-    id: 5,
     path: '/images/solutions-whisker.svg',
     alt: 'Self-service BI icon',
     title: 'Self-service BI',
@@ -208,11 +203,48 @@ export const SOLUTIONS_DATA = [
     link: AppRoutes.contacts
   },
   {
-    id: 6,
     path: '/images/solutions-pie.svg',
     alt: 'Data visualization icon',
     title: 'Data visualization',
     text: 'Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)',
     link: AppRoutes.contacts
+  }
+];
+
+export const FAQ_ACCORDION_DATA = [
+  {
+    label: 'What are data analytics?',
+    content:
+      'Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros.'
+  },
+  {
+    label: 'What is data mining?',
+    content:
+      'Icons are everywhere. These "little miracle workers" (as John Hicks described them) help us reinforce meaning in the interfaces we design and build. Their popularity in web design has never been greater; the conciseness and versatility of pictograms in particular make them a lovely fit for displays large and small. But icons on the web have had their fair share of challenges.'
+  },
+  {
+    label: 'What is business intelligence?',
+    content:
+      'Most assistive devices will read aloud text inserted via CSS, and many of the Unicode characters icon fonts depend on are no exception. Best-case scenario, your "favorite" icon gets read aloud as "black favorite star." Worse-case scenario, it`s read as "unpronounceable" or skipped entirely.'
+  },
+  {
+    label: 'What is exploratory data analysis (EDA)?',
+    content:
+      'When your icon font fails, the browser treats it like any other font and replaces it with a fallback. Best-case scenario, you`ve chosen your fallback characters carefully and something weird-looking but communicative still loads. Worse-case scenario (and far more often), the user sees something completely incongruous, usually the dreaded "missing character" glyph.'
+  },
+  {
+    label: 'What is confirmatory data analysis (CDA)?',
+    content:
+      'Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros.'
+  },
+  {
+    label: 'What are predictive analytics?',
+    content:
+      'Many dyslexic people find it helpful to swap out a website`s typeface for something like OpenDyslexic. But icon fonts get replaced as well, which makes for a frustratingly broken experience.'
+  },
+  {
+    label: 'What is data visualisation',
+    content:
+      'SVG is awesome for icons! It`s a vector image format with optional support for CSS, JavaScript, reusability, accessibility and a bunch more. It was made for this sort of thing.'
   }
 ];
