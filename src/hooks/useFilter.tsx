@@ -5,8 +5,9 @@ interface IFilterItems {
   path: string;
   alt: string;
   title: string;
+  subtitle?: string;
   text: string;
-  link: string;
+  link?: string;
 }
 
 interface IFilterHookReturn {
