@@ -23,4 +23,9 @@ module.exports = {
       '@interfaces': path.resolve(__dirname, 'src/interfaces'),
     },
   },
+  babel: {
+    loaderOptions: {
+      ignore: ['./node_modules/mapbox-gl/dist/mapbox-gl.js'],
+    },
+  },
 };
