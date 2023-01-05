@@ -168,46 +168,52 @@ export const PRICING_DATA = [
 
 export const SOLUTIONS_DATA = [
   {
+    id: 1,
     path: '/images/solutions-database.svg',
     alt: 'Data integration icon',
     title: 'Data integration',
     text: 'Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   },
   {
+    id: 2,
     path: '/images/solutions-calendar.svg',
     alt: 'Data integration icon',
     title: 'Data integration',
     text: 'Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   },
   {
+    id: 3,
     path: '/images/solutions-clipboard.svg',
     alt: 'Big data icon',
     title: 'Big data',
     text: 'Big data infrastructure setup and support.; big data quality and security management; big data capture, analysis and reporting.',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   },
   {
+    id: 4,
     path: '/images/solutions-data.svg',
     alt: 'Data warehousing icon',
     title: 'Data warehousing',
     text: 'The process of constructing and using a data warehouse. Data warehouse and data marts design and implementation.',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   },
   {
+    id: 5,
     path: '/images/solutions-whisker.svg',
     alt: 'Self-service BI icon',
     title: 'Self-service BI',
     text: 'Business intelligence; data analytics infrastructure design and implementation; scheduled analytics querying and reporting.',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   },
   {
+    id: 6,
     path: '/images/solutions-pie.svg',
     alt: 'Data visualization icon',
     title: 'Data visualization',
     text: 'Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)',
-    link: AppRoutes.contacts
+    link: AppRoutes.solutions
   }
 ];
 
@@ -246,5 +252,56 @@ export const FAQ_ACCORDION_DATA = [
     label: 'What is data visualisation',
     content:
       'SVG is awesome for icons! It`s a vector image format with optional support for CSS, JavaScript, reusability, accessibility and a bunch more. It was made for this sort of thing.'
+  }
+];
+
+export const SERVICES_DATA = [
+  {
+    id: 1,
+    path: '/images/services-brain.svg',
+    alt: 'Machine learning icon',
+    title: 'Machine learning',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
+  },
+  {
+    id: 2,
+    path: '/images/services-lines.svg',
+    alt: 'Embed analytics icon',
+    title: 'Embed analytics',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
+  },
+  {
+    id: 3,
+    path: '/images/services-key.svg',
+    alt: 'Access control icon',
+    title: 'Access control',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
+  },
+  {
+    id: 4,
+    path: '/images/services-area.svg',
+    alt: 'Data analytics icon',
+    title: 'Data analytics',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
+  },
+  {
+    id: 5,
+    path: '/images/services-pie.svg',
+    alt: 'Big data consulting icon',
+    title: 'Big data consulting',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
+  },
+  {
+    id: 6,
+    path: '/images/services-bot.svg',
+    alt: 'Artificial intelligence icon',
+    title: 'Artificial intelligence',
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
+    link: AppRoutes.services
   }
 ];

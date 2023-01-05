@@ -1,4 +1,5 @@
-export interface ISolutionsCardItemProps {
+export interface IAnalyticsCardItemProps {
+  id: number;
   path: string;
   alt: string;
   title: string;
