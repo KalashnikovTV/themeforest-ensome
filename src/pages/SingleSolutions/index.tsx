@@ -1,8 +1,8 @@
-import { useMemo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import LinkReadMore from '@components/LinkReadMore';
 import { AppRoutes } from '@constants/app-routes';
+import { useFilter } from '@hooks/useFilter';
 import { SOLUTIONS_DATA } from '@mocks/data';
 import { Container } from '@theme/theme';
 
@@ -11,16 +11,11 @@ import { Wrapper } from './styles';
 const SingleSolutions: React.FC = () => {
   const { id: solutionId } = useParams();
 
-  const getSolutionsItem = useMemo(() => SOLUTIONS_DATA?.find(({ id }) => id === Number(solutionId)), [solutionId]);
+  const { activeItem, filteredItems } = useFilter(SOLUTIONS_DATA, solutionId);
 
-  const getFilteredSolutions = useMemo(
-    () => SOLUTIONS_DATA?.filter((item) => item.id !== Number(solutionId)),
-    [solutionId]
-  );
+  if (!activeItem) return <Navigate to={AppRoutes.notFound} />;
 
-  if (!getSolutionsItem) return <Navigate to={AppRoutes.notFound} />;
-
-  const { id, path, alt, title, text } = getSolutionsItem;
+  const { id, path, alt, title, text } = activeItem;
 
   return (
     <Container>
@@ -33,7 +28,7 @@ const SingleSolutions: React.FC = () => {
       </Wrapper>
       <div>Other solutions:</div>
       <div>
-        {getFilteredSolutions.map((item) => {
+        {filteredItems.map((item) => {
           return (
             <div key={item.id}>
               <div>id: {item.id}</div>

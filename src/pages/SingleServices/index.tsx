@@ -1,8 +1,8 @@
-import { useMemo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import LinkReadMore from '@components/LinkReadMore';
 import { AppRoutes } from '@constants/app-routes';
+import { useFilter } from '@hooks/useFilter';
 import { SERVICES_DATA } from '@mocks/data';
 import { Container } from '@theme/theme';
 
@@ -11,16 +11,11 @@ import { Wrapper } from './styles';
 const SingleServices: React.FC = () => {
   const { id: serviceId } = useParams();
 
-  const getServicesItem = useMemo(() => SERVICES_DATA?.find(({ id }) => id === Number(serviceId)), [serviceId]);
+  const { activeItem, filteredItems } = useFilter(SERVICES_DATA, serviceId);
 
-  const getFilteredServices = useMemo(
-    () => SERVICES_DATA?.filter((item) => item.id !== Number(serviceId)),
-    [serviceId]
-  );
+  if (!activeItem) return <Navigate to={AppRoutes.notFound} />;
 
-  if (!getServicesItem) return <Navigate to={AppRoutes.notFound} />;
-
-  const { id, path, alt, title, text } = getServicesItem;
+  const { id, path, alt, title, text } = activeItem;
 
   return (
     <Container>
@@ -33,7 +28,7 @@ const SingleServices: React.FC = () => {
       </Wrapper>
       <div>Other services:</div>
       <div>
-        {getFilteredServices.map((item) => {
+        {filteredItems.map((item) => {
           return (
             <div key={item.id}>
               <div>id: {item.id}</div>
