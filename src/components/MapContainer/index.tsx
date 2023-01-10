@@ -7,7 +7,7 @@ import { theme } from '@theme/theme';
 const MapContainer: React.FC = () => {
   return (
     <Map
-      reuseMaps={false}
+      reuseMaps={true}
       initialViewState={{
         bounds: COORDINATES_INITIAL_VIEW
       }}
