@@ -15,6 +15,6 @@ export const Spinner = styled('div')<ILoadingProps>`
   border-radius: ${({ theme }): number => theme.maxWidth[0] / 2}%;
   border-right-color: ${({ theme }): string => theme.colors.primary};
   height: ${({ height }): number => height}px;
-  margin: ${({ theme }): number => theme.spaces[0]}px auto;
+  margin: ${({ theme, margin }): string => (margin ? margin : `${theme.spaces[0]}px auto`)};
   width: ${({ width }): number => width}px;
 `;
