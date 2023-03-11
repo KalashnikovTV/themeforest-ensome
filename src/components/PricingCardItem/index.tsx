@@ -28,7 +28,7 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [selectedDuration, setSelectedDuration] = useState(durations[0]);
 
-  const handleOnClickButton = (): void => {
+  const handleOpenModal = (): void => {
     setIsOpenModal(true);
   };
 
@@ -44,7 +44,7 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
           <Price>{price}</Price>
           <ButtonGroups items={durations} onItemClick={(item): void => setSelectedDuration(item)} />
         </PriceWrapper>
-        <Button onClick={handleOnClickButton}>Choose plan</Button>
+        <Button onClick={handleOpenModal}>Choose plan</Button>
 
         <PricingPossibilities possibilities={possibilities} />
       </Card>

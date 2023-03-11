@@ -100,3 +100,9 @@ export const Container = styled('div')`
   padding: ${theme.spaces[0]}px ${theme.spaces[8]}px;
   position: relative;
 `;
+
+export const Content = styled('div')`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;

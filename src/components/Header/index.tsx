@@ -11,7 +11,7 @@ import { Wrapper, HeaderBlock, Button } from './styles';
 const Header: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const handleOnClickButton = (): void => {
+  const handleOpenModal = (): void => {
     setIsOpenModal(true);
   };
 
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           <LogoLink isWhiteLogo={false} />
           <NavBar withMobileBurgerMenu={true} direction="row" />
 
-          <Button onClick={handleOnClickButton}>Watch the demo</Button>
+          <Button onClick={handleOpenModal}>Watch the demo</Button>
           <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
             <VideoDialog />
           </Modal>
