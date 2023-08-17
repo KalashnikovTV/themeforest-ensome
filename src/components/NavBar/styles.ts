@@ -19,11 +19,47 @@ export const Link = styled(NavLink)<INavBarProps>`
   &:active {
     color: ${({ theme, direction }): string => (direction === 'row' ? theme.colors.secondary : theme.colors.white)};
   }
+
+  @media (max-width: 960px) {
+    ${({ $withMobileBurgerMenu, theme }): string =>
+      $withMobileBurgerMenu
+        ? `
+        padding: ${theme.spaces[7]}px 0px;
+        display: block;
+        color: ${theme.colors.white};
+        border-bottom: 1px solid ${theme.colors.black};
+
+        &.active {
+          color: ${theme.colors.secondary};
+        }
+
+        &:active {
+          color: ${theme.colors.secondary};
+        }
+
+        &:hover {
+          color: ${theme.colors.secondary};
+        }
+    `
+        : ''};
+  }
 `;
 
 export const BurgerButton = styled('div')`
+  cursor: pointer;
   display: none;
   width: ${({ theme }): number => theme.spaces[12]}px;
+
+  @media (max-width: 960px) {
+    display: block;
+    position: absolute;
+    top: ${({ theme }): number => theme.spaces[24] + theme.spaces[2]}px;
+    right: ${({ theme }): number => theme.spaces[27] + theme.spaces[27] + theme.spaces[20]}px;
+  }
+
+  @media (max-width: 440px) {
+    right: ${({ theme }): number => theme.spaces[8]}px;
+  }
 `;
 
 export const BurgerRow = styled('div')`
@@ -41,6 +77,22 @@ export const Nav = styled('nav')``;
 export const List = styled('ul')<INavBarProps>`
   display: flex;
   flex-direction: ${({ direction }): string => direction};
+
+  @media (max-width: 960px) {
+    ${({ withMobileBurgerMenu, isOpenBurger, theme }): string =>
+      withMobileBurgerMenu
+        ? `
+      display: ${isOpenBurger ? 'block' : 'none'};
+      position: absolute;
+      z-index: 1;
+      width: ${theme.maxWidth[0]}%;
+      top: ${theme.spaces[27] + theme.spaces[23]}px;
+      left: ${theme.spaces[0]}px;
+      right: ${theme.spaces[0]}px;
+      background-color: ${theme.colors.primary};
+    `
+        : ''};
+  }
 `;
 
 export const Item = styled('li')<INavBarProps>`
@@ -50,5 +102,15 @@ export const Item = styled('li')<INavBarProps>`
   &:first-child {
     margin-left: ${({ theme }): number => theme.spaces[0]}px;
     margin-top: ${({ theme }): number => theme.spaces[0]}px;
+  }
+
+  @media (max-width: 960px) {
+    ${({ withMobileBurgerMenu, theme }): string =>
+      withMobileBurgerMenu
+        ? `
+        text-align: center;
+        margin-left: ${theme.spaces[0]}px;
+    `
+        : ''};
   }
 `;

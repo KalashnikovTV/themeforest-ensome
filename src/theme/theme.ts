@@ -8,7 +8,7 @@ import styled, {
 
 type ObjectMap<T> = { [key: string]: T };
 
-const SCREEN_SIZES: ObjectMap<number> = {
+export const SCREEN_SIZES: ObjectMap<number> = {
   mobileS: 320,
   mobileM: 375,
   mobileL: 425,

@@ -1,4 +1,6 @@
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
+
+import { useLocation } from 'react-router-dom';
 
 import { NAVIGATE_LINKS } from '@constants/navigate-links';
 
@@ -11,24 +13,37 @@ const NavBar: React.FC<INavBarProps> = ({
   withMobileBurgerMenu = false,
   direction = 'row'
 }: INavBarProps) => {
+  const location = useLocation();
+
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
+
+  const handleBurgerClick = (): void => {
+    setIsOpenBurger(!isOpenBurger);
+  };
+
+  useEffect(() => {
+    setIsOpenBurger(false);
+  }, [location]);
+
   return (
     <Nav>
       {withMobileBurgerMenu && (
-        <BurgerButton>
+        <BurgerButton onClick={handleBurgerClick}>
           <BurgerRow />
           <BurgerRow />
           <BurgerRow />
         </BurgerButton>
       )}
-      <List direction={direction}>
+      <List direction={direction} isOpenBurger={isOpenBurger} withMobileBurgerMenu={withMobileBurgerMenu}>
         {routes.map(({ id, name, path }) => {
           return (
-            <Item key={id} direction={direction}>
+            <Item key={id} direction={direction} withMobileBurgerMenu={withMobileBurgerMenu}>
               <Link
                 to={path}
                 direction={direction}
                 className={({ isActive }): string | undefined => (isActive ? 'active' : undefined)}
                 title={`Go to ${path}`}
+                $withMobileBurgerMenu={withMobileBurgerMenu}
               >
                 {name}
               </Link>

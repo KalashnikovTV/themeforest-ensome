@@ -7,5 +7,7 @@ export interface INavBarProps {
     path: AppRoutes;
   }[];
   withMobileBurgerMenu?: boolean;
+  $withMobileBurgerMenu?: boolean;
+  isOpenBurger?: boolean;
   direction: 'column' | 'row';
 }

@@ -46,4 +46,8 @@ export const Button = styled('button')`
     transform: ${({ theme }): string => `translateY(-${theme.maxWidth[0] / 2}%)`};
     width: ${({ theme }): number => theme.spaces[12]}px;
   }
+
+  @media (max-width: 440px) {
+    display: none;
+  }
 `;
