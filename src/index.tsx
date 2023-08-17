@@ -12,6 +12,6 @@ const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <StrictMode>
     <App />
-    {/* q */}
+    {/* q2 */}
   </StrictMode>
 );
