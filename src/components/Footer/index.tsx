@@ -5,7 +5,7 @@ import Sprites from '@components/Sprites';
 import { SERVICE_LINKS } from '@constants/service-links';
 import { Container } from '@theme/theme';
 
-import { FooterBlock, Wrapper, Column, LinkInfo, Title, WrapperInfo, Paragraph } from './styles';
+import { FooterBlock, Wrapper, Column, LinkInfo, Title, WrapperInfo, Paragraph, Address } from './styles';
 
 const Footer: React.FC = () => {
   return (
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               <LinkInfo href="tel:+16012015580" rel="noreferrer noopener nofollow">
                 +1 601-201-5580
               </LinkInfo>
-              <Paragraph>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</Paragraph>
+              <Address>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</Address>
             </WrapperInfo>
           </Column>
         </Wrapper>

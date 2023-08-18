@@ -47,6 +47,13 @@ export const Button = styled('button')`
     width: ${({ theme }): number => theme.spaces[12]}px;
   }
 
+  @media (max-width: 600px) {
+    padding: ${({ theme }): number => theme.spaces[5]}px ${({ theme }): number => theme.spaces[6]}px
+      ${({ theme }): number => theme.spaces[5]}px ${({ theme }): number => theme.spaces[19]}px;
+    font-size: ${({ theme }): number => theme.fontSizes[0]}px;
+    max-width: ${({ theme }): number => theme.maxWidth[1]}px;
+  }
+
   @media (max-width: 440px) {
     display: none;
   }

@@ -9,7 +9,7 @@ const Sprites: React.FC = () => {
         return (
           <Item key={id}>
             <Link href={href} target="_blank" rel="noreferrer noopener nofollow" title={`Go to ${href}`}>
-              <Image src={path} alt={alt} />
+              <Image src={path} alt={alt} height={25} width={25} />
             </Link>
           </Item>
         );

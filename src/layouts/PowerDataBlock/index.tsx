@@ -31,7 +31,11 @@ const PowerDataBlock: React.FC = () => {
             </Paragraph>
             <LinkWrapper>
               <Border>
-                <LinkLearn to={AppRoutes.services} title={`Go to ${AppRoutes.services}`}>
+                <LinkLearn
+                  to={AppRoutes.services}
+                  title={`Go to ${AppRoutes.services}`}
+                  aria-label="Learn more about services"
+                >
                   Learn More
                 </LinkLearn>
               </Border>

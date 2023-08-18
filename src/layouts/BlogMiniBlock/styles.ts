@@ -42,8 +42,9 @@ export const SliderItemTitle = styled('h3')`
   margin-top: ${({ theme }): number => theme.spaces[6]}px;
 `;
 
-export const SliderItemSubtitle = styled('h4')`
+export const SliderItemSubtitle = styled('span')`
   color: ${({ theme }): string => theme.colors.grey};
+  display: block;
   font-size: ${({ theme }): number => theme.fontSizes[1]}px;
   font-weight: ${({ theme }): number => theme.fontWeight[4]};
   line-height: ${({ theme }): number => theme.lineHeight[6]}px;

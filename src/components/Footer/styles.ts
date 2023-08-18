@@ -28,6 +28,53 @@ export const Wrapper = styled('div')`
   .contact-link {
     max-width: ${({ theme }): number => theme.maxWidth[6] + theme.spaces[7]}px;
   }
+
+  @media (max-width: 980px) {
+    .social-link {
+      margin-right: ${({ theme }): number => theme.spaces[19]}px;
+    }
+
+    .quick-link {
+      margin-right: ${({ theme }): number => theme.spaces[19]}px;
+    }
+
+    .service-link {
+      margin-right: ${({ theme }): number => theme.spaces[19]}px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: ${({ theme }): number => theme.spaces[15]}px ${({ theme }): number => theme.spaces[0]}px;
+
+    .social-link {
+      order: 1;
+      margin-right: ${({ theme }): number => theme.spaces[0]}px;
+      max-width: ${({ theme }): number => theme.maxWidth[0]}%;
+      margin-top: ${({ theme }): number => theme.spaces[13]}px;
+    }
+
+    .quick-link {
+      order: 4;
+      margin-right: ${({ theme }): number => theme.spaces[0]}px;
+      max-width: ${({ theme }): number => theme.maxWidth[0]}%;
+    }
+
+    .service-link {
+      order: 3;
+      margin-right: ${({ theme }): number => theme.spaces[0]}px;
+      max-width: ${({ theme }): number => theme.maxWidth[0]}%;
+      margin-top: ${({ theme }): number => theme.spaces[13]}px;
+    }
+
+    .contact-link {
+      order: 2;
+      max-width: ${({ theme }): number => theme.maxWidth[0]}%;
+      margin-top: ${({ theme }): number => theme.spaces[13]}px;
+    }
+  }
 `;
 
 export const Column = styled('div')`
@@ -64,3 +111,7 @@ export const WrapperInfo = styled('div')`
 `;
 
 export const Paragraph = styled('p')``;
+
+export const Address = styled('address')`
+  font-style: normal;
+`;

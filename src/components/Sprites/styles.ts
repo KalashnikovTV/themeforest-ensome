@@ -5,11 +5,16 @@ export const List = styled('ul')`
   justify-content: space-between;
   margin-top: ${({ theme }): number => theme.spaces[10]}px;
   max-width: ${({ theme }): number => theme.maxWidth[5] + theme.spaces[13] - 1}px;
+
+  @media (max-width: 760px) {
+    margin: ${({ theme }): number => theme.spaces[6]}px auto ${({ theme }): number => theme.spaces[0]}px auto;
+  }
 `;
 
 export const Item = styled('li')`
   display: inline-block;
   height: ${({ theme }): number => theme.spaces[13] - 1}px;
+  width: ${({ theme }): number => theme.spaces[13] - 1}px;
 `;
 
 export const Link = styled('a')`

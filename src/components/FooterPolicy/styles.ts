@@ -7,6 +7,13 @@ export const Wrapper = styled('div')`
   display: flex;
   height: ${({ theme }): number => theme.spaces[27] + theme.spaces[4]}px;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    height: initial;
+    padding: ${({ theme }): number => theme.spaces[7]}px ${({ theme }): number => theme.spaces[0]}px;
+    gap: ${({ theme }): number => theme.spaces[3]}px;
+  }
 `;
 
 export const Paragraph = styled('p')`
@@ -27,5 +34,9 @@ export const LinkPolicy = styled(Link)`
   &:hover,
   &:active {
     color: ${({ theme }): string => theme.colors.white};
+  }
+
+  @media (max-width: 600px) {
+    margin-left: ${({ theme }): number => theme.spaces[8]}px;
   }
 `;

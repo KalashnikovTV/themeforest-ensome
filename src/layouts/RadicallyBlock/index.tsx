@@ -13,7 +13,7 @@ const RadicallyBlock: React.FC = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </Paragraph>
-        <LinkMore path={AppRoutes.solutions} width={190} height={54}>
+        <LinkMore path={AppRoutes.solutions} width={190} height={54} aria-label="Learn more about solutions">
           Learn more
         </LinkMore>
       </WrapperContent>

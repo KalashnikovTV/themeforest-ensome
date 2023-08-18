@@ -57,6 +57,10 @@ export const BurgerButton = styled('div')`
     right: ${({ theme }): number => theme.spaces[27] + theme.spaces[27] + theme.spaces[20]}px;
   }
 
+  @media (max-width: 600px) {
+    right: ${({ theme }): number => theme.spaces[27] + theme.spaces[26] + theme.spaces[1]}px;
+  }
+
   @media (max-width: 440px) {
     right: ${({ theme }): number => theme.spaces[8]}px;
   }
