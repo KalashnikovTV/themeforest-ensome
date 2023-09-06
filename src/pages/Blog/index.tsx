@@ -11,9 +11,13 @@ const Blog: React.FC = () => {
 
   const { activeItem, filteredItems } = useFilter(BLOG_DATA, blogId);
 
-  if (filteredItems && !blogId) return <Navigate to={`${AppRoutes.blog}/${DEFAULT_BLOG_NEWS_PAGE}`} />;
+  if (filteredItems && !blogId) {
+    return <Navigate to={`${AppRoutes.blog}/${DEFAULT_BLOG_NEWS_PAGE}`} />;
+  }
 
-  if (!activeItem) return <Navigate to={AppRoutes.notFound} />;
+  if (!activeItem) {
+    return <Navigate to={AppRoutes.notFound} />;
+  }
 
   const { id, path, alt, title, subtitle, text } = activeItem;
 

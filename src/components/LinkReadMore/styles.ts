@@ -6,8 +6,18 @@ export const Link = styled(LinkRouter)`
   font-weight: ${({ theme }): number => theme.fontWeight[5]};
   line-height: ${({ theme }): number => theme.lineHeight[6]}px;
   margin-top: ${({ theme }): number => theme.spaces[6]}px;
-  padding-right: ${({ theme }): number => theme.spaces[12]}px;
+  padding-right: ${({ theme }): number => theme.spaces[13]}px;
   position: relative;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: ${({ theme }): string => theme.colors.secondary};
+
+    &::after {
+      background-image: url('/images/icon-arrow-darkblue-right.svg');
+    }
+  }
 
   &::after {
     background-image: url('/images/icon-arrow-blue-right.svg');

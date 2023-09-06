@@ -9,7 +9,9 @@ export const Card = styled('div')`
 `;
 
 export const Image = styled('img')`
+  height: ${({ theme }): number => theme.spaces[25]}px;
   object-fit: contain;
+  width: ${({ theme }): number => theme.spaces[25]}px;
 `;
 
 export const Title = styled('h3')`

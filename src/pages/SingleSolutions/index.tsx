@@ -13,7 +13,9 @@ const SingleSolutions: React.FC = () => {
 
   const { activeItem, filteredItems } = useFilter(SOLUTIONS_DATA, solutionId);
 
-  if (!activeItem) return <Navigate to={AppRoutes.notFound} />;
+  if (!activeItem) {
+    return <Navigate to={AppRoutes.notFound} />;
+  }
 
   const { id, path, alt, title, text } = activeItem;
 

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { ILinkReadMoreProps } from './interfaces';
 import { Link } from './styles';
 
@@ -9,4 +11,4 @@ const LinkReadMore: React.FC<ILinkReadMoreProps> = ({ path }: ILinkReadMoreProps
   );
 };
 
-export default LinkReadMore;
+export default memo(LinkReadMore);

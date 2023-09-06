@@ -13,7 +13,9 @@ const SingleServices: React.FC = () => {
 
   const { activeItem, filteredItems } = useFilter(SERVICES_DATA, serviceId);
 
-  if (!activeItem) return <Navigate to={AppRoutes.notFound} />;
+  if (!activeItem) {
+    return <Navigate to={AppRoutes.notFound} />;
+  }
 
   const { id, path, alt, title, text } = activeItem;
 

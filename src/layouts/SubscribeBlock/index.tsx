@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import SubscribeForm from '@forms/SubscribeForm';
 import { Container } from '@theme/theme';
 
@@ -23,4 +25,4 @@ const SubscribeBlock: React.FC<ISubscribeBlockProps> = ({ bgColor }: ISubscribeB
   );
 };
 
-export default SubscribeBlock;
+export default memo(SubscribeBlock);

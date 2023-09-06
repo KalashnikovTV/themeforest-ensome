@@ -8,7 +8,7 @@ export const Wrapper = styled('div')`
 `;
 
 export const Image = styled.img.attrs({
-  src: '/images/radically-img.png',
+  src: '/images/radically-img.webp',
   alt: 'Radically image'
 })`
   object-fit: cover;

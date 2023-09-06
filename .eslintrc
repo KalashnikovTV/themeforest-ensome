@@ -57,7 +57,6 @@
   "rules": {
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
-    "import/no-unresolved": "error",
     "better-styled-components/sort-declarations-alphabetically": 2,
     "import/order": [
       "error",

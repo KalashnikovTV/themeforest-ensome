@@ -7,8 +7,8 @@ export interface IBreadcrumbsProps {
   rootLabel?: string | null;
   omitRootLabel?: boolean;
   labelsToUppercase?: boolean | null;
-  replaceCharacterList?: Array<CharacterMap> | null;
-  omitIndexList?: Array<number> | null;
+  replaceCharacterList?: CharacterMap[] | null;
+  omitIndexList?: number[] | null;
   transformLastLabel?: ((title: string) => string) | null;
 }
 

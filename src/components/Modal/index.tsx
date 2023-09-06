@@ -61,7 +61,9 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
     e.stopPropagation();
   }, []);
 
-  if (!isOpenModal) return null;
+  if (!isOpenModal) {
+    return null;
+  }
 
   return createPortal(
     <>
