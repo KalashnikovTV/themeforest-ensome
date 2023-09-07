@@ -15,6 +15,10 @@ const Header: React.FC = () => {
     setIsOpenModal(true);
   };
 
+  const handleCloseModal = (): void => {
+    setIsOpenModal(false);
+  };
+
   return (
     <HeaderBlock>
       <Container>
@@ -23,7 +27,7 @@ const Header: React.FC = () => {
           <NavBar withMobileBurgerMenu={true} direction="row" />
 
           <Button onClick={handleOpenModal}>Watch the demo</Button>
-          <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+          <Modal opened={isOpenModal} onClose={handleCloseModal}>
             <VideoDialog />
           </Modal>
         </Wrapper>

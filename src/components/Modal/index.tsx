@@ -1,12 +1,16 @@
 import { memo, useRef, useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
+import { useLatest } from '@hooks/useLatest';
+
 import { IModalProps } from './interfaces';
 
 import { ModalContent, ModalOverlay } from './styles';
 
-const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }: IModalProps) => {
+const Modal: React.FC<IModalProps> = ({ opened, onClose, children }: IModalProps) => {
   const elementRef = useRef<HTMLDivElement | null>(null);
+
+  const latestHandler = useLatest(onClose);
 
   const calcScroll = useCallback((): number => {
     const div = document.createElement('div');
@@ -39,7 +43,7 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
   }, []);
 
   useEffect(() => {
-    if (isOpenModal) {
+    if (opened) {
       const scroll = calcScroll();
 
       document.body.style.overflowY = 'hidden';
@@ -50,18 +54,17 @@ const Modal: React.FC<IModalProps> = ({ isOpenModal, setIsOpenModal, children }:
         document.body.style.marginRight = `0px`;
       };
     }
-  }, [isOpenModal, calcScroll]);
+  }, [opened, calcScroll]);
 
   const handleOnClickOverlay = useCallback((): void => {
-    setIsOpenModal(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    latestHandler.current();
+  }, [latestHandler]);
 
   const handleOnClickContent = useCallback((e: React.MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
   }, []);
 
-  if (!isOpenModal) {
+  if (!opened) {
     return null;
   }
 

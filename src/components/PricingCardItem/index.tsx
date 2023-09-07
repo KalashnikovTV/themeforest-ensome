@@ -49,7 +49,7 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
         <PricingPossibilities possibilities={possibilities} />
       </Card>
 
-      <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+      <Modal opened={isOpenModal} onClose={handleCloseModal}>
         <PricingModalWrapper>
           <PricingModalTitle>Payment</PricingModalTitle>
           <PricingModalTitle>
@@ -66,7 +66,7 @@ const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardIte
           <PayPalForm
             price={transformPrice(price)}
             description={`Plan: ${title}. Duration: ${transformPriceDuration(selectedDuration)}`}
-            handleCloseModal={handleCloseModal}
+            onClose={handleCloseModal}
           />
         </PricingModalWrapper>
       </Modal>

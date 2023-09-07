@@ -6,7 +6,7 @@ import Loading from '@components/Loading';
 import { IPayPalFormProps } from '@forms/PayPalForm/interfaces';
 import { showToast } from '@utils/showToast';
 
-const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, handleCloseModal }: IPayPalFormProps) => {
+const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, onClose }: IPayPalFormProps) => {
   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -36,13 +36,13 @@ const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, handleCl
               showToast({ type: 'error', message: 'Something went wrong. Please try to pay later...' });
             })
             .finally(() => {
-              handleCloseModal();
+              onClose();
             })
         : Promise.resolve().then(() => {
             showToast({ type: 'error', message: 'Service is unavailable. Please try to payment later...' });
           }),
     onInit: () => setIsInitialized(true),
-    onCancel: () => handleCloseModal()
+    onCancel: () => onClose()
   };
 
   return (

@@ -4,7 +4,7 @@ import PayPalButtons from '@components/PayPalButton';
 
 import { IPayPalFormProps } from './interfaces';
 
-const PayPalForm: React.FC<IPayPalFormProps> = ({ price, description, handleCloseModal }: IPayPalFormProps) => {
+const PayPalForm: React.FC<IPayPalFormProps> = ({ price, description, onClose }: IPayPalFormProps) => {
   return (
     <PayPalScriptProvider
       deferLoading
@@ -13,7 +13,7 @@ const PayPalForm: React.FC<IPayPalFormProps> = ({ price, description, handleClos
         components: 'buttons'
       }}
     >
-      <PayPalButtons price={price} description={description} handleCloseModal={handleCloseModal} />
+      <PayPalButtons price={price} description={description} onClose={onClose} />
     </PayPalScriptProvider>
   );
 };

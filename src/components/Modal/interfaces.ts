@@ -1,5 +1,5 @@
 export interface IModalProps {
-  isOpenModal: boolean;
-  setIsOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+  opened: boolean;
+  onClose: () => void;
   children: React.ReactNode;
 }
