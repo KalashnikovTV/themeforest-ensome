@@ -8,5 +8,5 @@ export enum AppRoutes {
   faqs = '/faqs',
   solutions = '/solutions',
   elements = '/elements',
-  notFound = '/not-found'
+  notFound = '/not-found',
 }

@@ -13,7 +13,7 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
   labelsToUppercase = true,
   replaceCharacterList = [{ from: '-', to: ' ' }],
   omitIndexList = null,
-  transformLastLabel = null
+  transformLastLabel = null,
 }: IBreadcrumbsProps) => {
   const location = useLocation();
 
@@ -27,7 +27,7 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
       const pathArray = linkPath.map((path, i) => {
         return {
           breadcrumb: path,
-          path: '/' + linkPath.slice(0, i + 1).join('/')
+          path: '/' + linkPath.slice(0, i + 1).join('/'),
         };
       });
 

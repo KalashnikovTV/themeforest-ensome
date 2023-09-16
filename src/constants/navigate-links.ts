@@ -4,41 +4,41 @@ export const NAVIGATE_LINKS = [
   {
     id: 1,
     name: 'Home',
-    path: AppRoutes.home
+    path: AppRoutes.home,
   },
   {
     id: 2,
     name: 'Blog',
-    path: AppRoutes.blog
+    path: AppRoutes.blog,
   },
   {
     id: 3,
     name: 'Solutions',
-    path: AppRoutes.solutions
+    path: AppRoutes.solutions,
   },
   {
     id: 4,
     name: 'Contacts',
-    path: AppRoutes.contacts
+    path: AppRoutes.contacts,
   },
   {
     id: 5,
     name: 'Our Team',
-    path: AppRoutes.ourTeam
+    path: AppRoutes.ourTeam,
   },
   {
     id: 6,
     name: 'Services',
-    path: AppRoutes.services
+    path: AppRoutes.services,
   },
   {
     id: 7,
     name: 'About Us',
-    path: AppRoutes.aboutUs
+    path: AppRoutes.aboutUs,
   },
   {
     id: 8,
     name: 'FAQs',
-    path: AppRoutes.faqs
-  }
+    path: AppRoutes.faqs,
+  },
 ];

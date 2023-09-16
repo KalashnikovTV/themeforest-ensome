@@ -14,6 +14,6 @@ export const showToast = ({ type, message }: IToastOptions): void => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'colored'
+    theme: 'colored',
   });
 };

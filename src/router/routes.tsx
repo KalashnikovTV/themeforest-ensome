@@ -26,5 +26,5 @@ export const publicRoutes = [
   { id: 9, path: `${AppRoutes.services}/:id`, element: <Service /> },
   { id: 10, path: `${AppRoutes.aboutUs}`, element: <AboutUs /> },
   { id: 11, path: `${AppRoutes.faqs}`, element: <FaQs /> },
-  { id: 12, path: `${AppRoutes.notFound}`, element: <NotFound /> }
+  { id: 12, path: `${AppRoutes.notFound}`, element: <NotFound /> },
 ];

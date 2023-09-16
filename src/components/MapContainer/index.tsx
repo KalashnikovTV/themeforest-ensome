@@ -38,7 +38,7 @@ const MapContainer: React.FC = () => {
         onRender={handleRenderMap}
         reuseMaps={true}
         initialViewState={{
-          bounds: COORDINATES_INITIAL_VIEW
+          bounds: COORDINATES_INITIAL_VIEW,
         }}
         style={{ width: '100%', height: 460 }}
         mapStyle="mapbox://styles/mapbox/light-v11"

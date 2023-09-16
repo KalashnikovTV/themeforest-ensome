@@ -10,7 +10,7 @@ const PayPalForm: React.FC<IPayPalFormProps> = ({ price, description, onClose }:
       deferLoading
       options={{
         'client-id': process.env.REACT_APP_PAYPAL_CLIENT_ID,
-        components: 'buttons'
+        components: 'buttons',
       }}
     >
       <PayPalButtons price={price} description={description} onClose={onClose} />

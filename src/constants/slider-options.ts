@@ -3,5 +3,5 @@ export enum SliderOptions {
   slidesPosition = 0,
   slidesToShow = 3,
   slidesToScroll = 1,
-  slidesGap = 30
+  slidesGap = 30,
 }

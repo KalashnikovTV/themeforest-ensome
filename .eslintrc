@@ -42,9 +42,9 @@
     "@typescript-eslint",
     "react",
     "react-hooks",
-    "prettier",
     "import",
-    "better-styled-components"
+    "better-styled-components",
+    "prettier"
   ],
   "overrides": [
     {
@@ -55,6 +55,7 @@
     }
   ],
   "rules": {
+    "prettier/prettier": "error",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "better-styled-components/sort-declarations-alphabetically": 2,

@@ -20,7 +20,7 @@ import {
   SliderItemTitle,
   SliderItemSubtitle,
   SliderItemImage,
-  SliderItemText
+  SliderItemText,
 } from './styles';
 
 const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
@@ -28,7 +28,7 @@ const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
   items,
   slidesToShow,
   slidesToScroll,
-  slidesGap
+  slidesGap,
 }: IBlogMiniBlockProps) => {
   return (
     <Wrapper>

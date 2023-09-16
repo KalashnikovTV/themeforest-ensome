@@ -19,7 +19,7 @@ import {
   Button,
   PricingModalWrapper,
   PricingModalTitle,
-  PricingModalSpan
+  PricingModalSpan,
 } from './styles';
 
 const PricingCardItem: React.FC<IPricingCardItemProps> = (props: IPricingCardItemProps) => {

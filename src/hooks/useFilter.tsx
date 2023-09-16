@@ -34,6 +34,6 @@ export const useFilter = (items: IFilterItems[], filterProp: string | undefined)
     enteredItems,
     setEnteredItems,
     activeItem,
-    filteredItems
+    filteredItems,
   };
 };

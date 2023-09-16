@@ -11,7 +11,7 @@ import {
   LinkLearn,
   LinkWrapper,
   Border,
-  Image
+  Image,
 } from './styles';
 
 const PowerDataBlock: React.FC = () => {

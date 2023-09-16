@@ -12,7 +12,7 @@ const PageHeaderBlock: React.FC<IPageHeaderBlockProps> = ({
   description = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.',
   isDetailed = false,
   omitIndexList = null,
-  replaceDefaultTitle = ''
+  replaceDefaultTitle = '',
 }: IPageHeaderBlockProps) =>
   !isDetailed ? (
     <Wrapper>

@@ -37,7 +37,7 @@ const SubscribeForm: React.FC = () => {
           }
         )
         .finally(() => setIsDisabledButton(false));
-    }
+    },
   });
 
   return (

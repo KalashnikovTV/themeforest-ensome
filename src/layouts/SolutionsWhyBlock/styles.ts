@@ -10,7 +10,7 @@ export const Wrapper = styled('div')`
 
 export const Image = styled.img.attrs({
   src: '/images/why-img.webp',
-  alt: 'Why choose image'
+  alt: 'Why choose image',
 })`
   object-fit: cover;
   width: ${({ theme }): number => theme.maxWidth[0]}%;

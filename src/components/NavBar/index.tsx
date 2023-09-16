@@ -11,7 +11,7 @@ import { BurgerButton, BurgerRow, Link, List, Item, Nav } from './styles';
 const NavBar: React.FC<INavBarProps> = ({
   routes = NAVIGATE_LINKS,
   withMobileBurgerMenu = false,
-  direction = 'row'
+  direction = 'row',
 }: INavBarProps) => {
   const location = useLocation();
 

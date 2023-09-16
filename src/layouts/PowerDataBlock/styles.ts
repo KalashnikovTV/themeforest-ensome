@@ -91,7 +91,7 @@ export const Border = styled('div')`
 
 export const Image = styled.img.attrs({
   src: '/images/power-img.webp',
-  alt: 'Power image'
+  alt: 'Power image',
 })`
   height: ${({ theme }): number => theme.maxWidth[13] - theme.spaces[5]}px;
   object-fit: cover;

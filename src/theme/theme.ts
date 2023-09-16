@@ -3,7 +3,7 @@ import styled, {
   CSSObject,
   DefaultTheme,
   FlattenSimpleInterpolation,
-  SimpleInterpolation
+  SimpleInterpolation,
 } from 'styled-components';
 
 type ObjectMap<T> = { [key: string]: T };
@@ -16,7 +16,7 @@ export const SCREEN_SIZES: ObjectMap<number> = {
   laptop: 1024,
   laptopM: 1140,
   laptopL: 1440,
-  desktop: 2560
+  desktop: 2560,
 };
 
 const above = Object.keys(SCREEN_SIZES).reduce(
@@ -83,15 +83,15 @@ export const theme: DefaultTheme = {
     grey: 'rgb(148, 151, 161)',
     lightGray: 'rgb(241, 246, 250)',
     red: 'rgb(193, 64, 64)',
-    white: 'rgb(255, 255, 255)'
+    white: 'rgb(255, 255, 255)',
   },
   shadows: {
     darknessBlue: '0px 12px 30px rgba(24, 92, 255, 0.18)',
     darkBlue: '0px 2px 20px 17px rgba(24, 92, 255, 0.04)',
     lightBlue: '0px 12px 30px 17px rgba(24, 92, 255, 0.04)',
     grey: '0px 2px 6px rgba(0, 43, 78, 0.15), 0px 1px 2px rgba(0, 43, 78, 0.3)',
-    lightGray: '0px 4px 12px rgba(12, 68, 204, 0.1)'
-  }
+    lightGray: '0px 4px 12px rgba(12, 68, 204, 0.1)',
+  },
 };
 
 export const Container = styled('div')`

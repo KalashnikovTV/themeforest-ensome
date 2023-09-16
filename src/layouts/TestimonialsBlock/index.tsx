@@ -19,7 +19,7 @@ import {
   SliderItemTitle,
   SliderItemSubtitle,
   SliderItemImage,
-  SliderItemText
+  SliderItemText,
 } from './styles';
 
 const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
@@ -27,7 +27,7 @@ const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
   items,
   slidesToShow,
   slidesToScroll,
-  slidesGap
+  slidesGap,
 }: ITestimonialsBlockProps) => {
   return (
     <Wrapper>

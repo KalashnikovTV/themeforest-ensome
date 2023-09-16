@@ -4,7 +4,7 @@ import { IErrorBoundaryProps, IErrorBoundaryState } from './interfaces';
 
 export default class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> {
   public state: IErrorBoundaryState = {
-    error: null
+    error: null,
   };
 
   public static getDerivedStateFromError(error: Error): IErrorBoundaryState {

@@ -13,7 +13,7 @@ const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, onClose 
   useEffect(() => {
     dispatch({
       type: 'resetOptions',
-      value: { ...options }
+      value: { ...options },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -42,7 +42,7 @@ const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, onClose 
             showToast({ type: 'error', message: 'Service is unavailable. Please try to payment later...' });
           }),
     onInit: () => setIsInitialized(true),
-    onCancel: () => onClose()
+    onCancel: () => onClose(),
   };
 
   return (

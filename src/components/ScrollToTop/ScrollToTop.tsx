@@ -8,7 +8,7 @@ const ScrollToTop: React.FC = () => {
     document.documentElement.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth' // auto => without animation
+      behavior: 'smooth', // auto => without animation
     });
   }, [pathname]);
 

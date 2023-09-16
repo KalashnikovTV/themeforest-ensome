@@ -11,7 +11,7 @@ const Slider: React.FC<ISliderProps> = ({
   slidesToShow,
   slidesToScroll,
   slidesGap,
-  withBoxShadow
+  withBoxShadow,
 }: ISliderProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
