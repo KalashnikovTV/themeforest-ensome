@@ -4,4 +4,5 @@ export interface IPageHeaderBlockProps {
   description?: string;
   isDetailed?: boolean;
   omitIndexList?: number[] | null;
+  replaceDefaultTitle?: string;
 }
