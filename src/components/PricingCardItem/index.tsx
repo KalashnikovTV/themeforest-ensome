@@ -2,9 +2,7 @@ import { memo, useState } from 'react';
 
 import ButtonGroups from '@components/ButtonGroups';
 import Modal from '@components/Modal';
-
 import PricingPossibilities from '@components/PricingPossibilities';
-
 import PayPalForm from '@forms/PayPalForm';
 import { transformPrice } from '@utils/transformPrice';
 import { transformPriceDuration } from '@utils/transformPriceDuration';

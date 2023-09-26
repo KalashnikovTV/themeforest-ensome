@@ -1,5 +1,5 @@
 export interface IPanelProps {
-  activeTab: number;
+  isActive: boolean;
   index: number;
   toggleTab: (index: number) => void;
   label: string;

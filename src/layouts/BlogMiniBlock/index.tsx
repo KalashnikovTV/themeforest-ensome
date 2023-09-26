@@ -4,7 +4,7 @@ import LinkReadMore from '@components/LinkReadMore';
 import Slider from '@components/Slider';
 
 import { ISliderRenderItemProps } from '@components/Slider/interfaces';
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 import { Container } from '@theme/theme';
 
 import { IBlogMiniBlockProps } from './interfaces';
@@ -47,20 +47,20 @@ const BlogMiniBlock: React.FC<IBlogMiniBlockProps> = ({
             return (
               <SliderItem key={id} itemWidth={itemWidth}>
                 <SliderItemHeader>
-                  <SliderItemLink to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
+                  <SliderItemLink to={`${Routes.BLOG}/${id}`} title={`Go to ${Routes.BLOG}/${id}`}>
                     <SliderItemImage src={path} alt={alt} />
                   </SliderItemLink>
                   <SliderItemContent>
                     <SliderItemSubtitle>{subtitle}</SliderItemSubtitle>
                     <SliderItemTitle>
-                      <SliderItemLink to={`${AppRoutes.blog}/${id}`} title={`Go to ${AppRoutes.blog}/${id}`}>
+                      <SliderItemLink to={`${Routes.BLOG}/${id}`} title={`Go to ${Routes.BLOG}/${id}`}>
                         {title}
                       </SliderItemLink>
                     </SliderItemTitle>
                   </SliderItemContent>
                 </SliderItemHeader>
                 <SliderItemText>{text}</SliderItemText>
-                <LinkReadMore path={`${AppRoutes.blog}/${id}`} />
+                <LinkReadMore path={`${Routes.BLOG}/${id}`} />
               </SliderItem>
             );
           }}

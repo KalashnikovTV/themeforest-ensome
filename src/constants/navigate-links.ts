@@ -1,44 +1,44 @@
-import { AppRoutes } from './app-routes';
+import { Routes } from '@router/routes';
 
 export const NAVIGATE_LINKS = [
   {
     id: 1,
     name: 'Home',
-    path: AppRoutes.home,
+    path: Routes.HOME,
   },
   {
     id: 2,
     name: 'Blog',
-    path: AppRoutes.blog,
+    path: Routes.BLOG,
   },
   {
     id: 3,
     name: 'Solutions',
-    path: AppRoutes.solutions,
+    path: Routes.SOLUTIONS,
   },
   {
     id: 4,
     name: 'Contacts',
-    path: AppRoutes.contacts,
+    path: Routes.CONTACTS,
   },
   {
     id: 5,
     name: 'Our Team',
-    path: AppRoutes.ourTeam,
+    path: Routes.OUR_TEAM,
   },
   {
     id: 6,
     name: 'Services',
-    path: AppRoutes.services,
+    path: Routes.SERVICES,
   },
   {
     id: 7,
     name: 'About Us',
-    path: AppRoutes.aboutUs,
+    path: Routes.ABOUT_US,
   },
   {
     id: 8,
     name: 'FAQs',
-    path: AppRoutes.faqs,
+    path: Routes.FAQS,
   },
 ];

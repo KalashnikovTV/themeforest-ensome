@@ -1,11 +1,9 @@
 import { memo, useEffect, useState } from 'react';
-
 import { useLocation } from 'react-router-dom';
 
 import { NAVIGATE_LINKS } from '@constants/navigate-links';
 
 import { INavBarProps } from './interfaces';
-
 import { BurgerButton, BurgerRow, Link, List, Item, Nav } from './styles';
 
 const NavBar: React.FC<INavBarProps> = ({

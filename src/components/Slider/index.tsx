@@ -15,8 +15,8 @@ const Slider: React.FC<ISliderProps> = ({
 }: ISliderProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const [position, setPosition] = useState(SliderOptions.slidesPosition);
-  const [itemWidth, setItemWidth] = useState(SliderOptions.defaultItemWidth);
+  const [position, setPosition] = useState(SliderOptions.SLIDES_POSITION);
+  const [itemWidth, setItemWidth] = useState(SliderOptions.DEFAULT_ITEM_WIDTH);
 
   useLayoutEffect(() => {
     if (containerRef.current) {
@@ -28,7 +28,7 @@ const Slider: React.FC<ISliderProps> = ({
 
   const movePosition = useMemo(() => slidesToScroll * itemWidth + slidesGap, [itemWidth, slidesGap, slidesToScroll]);
 
-  const handleDisabledPrevButton = useMemo(() => position === SliderOptions.slidesPosition, [position]);
+  const handleDisabledPrevButton = useMemo(() => position === SliderOptions.SLIDES_POSITION, [position]);
 
   const handleDisabledNextButton = useMemo(
     () => position <= -(itemsCount - slidesToShow) * itemWidth + slidesGap,

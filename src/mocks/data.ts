@@ -1,4 +1,4 @@
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 
 export const TESTIMONIALS_DATA = [
   {
@@ -178,7 +178,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Data integration icon',
     title: 'Data integration',
     text: 'Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
   {
     id: 2,
@@ -186,7 +186,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Data integration icon',
     title: 'Data integration',
     text: 'Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
   {
     id: 3,
@@ -194,7 +194,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Big data icon',
     title: 'Big data',
     text: 'Big data infrastructure setup and support.; big data quality and security management; big data capture, analysis and reporting.',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
   {
     id: 4,
@@ -202,7 +202,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Data warehousing icon',
     title: 'Data warehousing',
     text: 'The process of constructing and using a data warehouse. Data warehouse and data marts design and implementation.',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
   {
     id: 5,
@@ -210,7 +210,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Self-service BI icon',
     title: 'Self-service BI',
     text: 'Business intelligence; data analytics infrastructure design and implementation; scheduled analytics querying and reporting.',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
   {
     id: 6,
@@ -218,7 +218,7 @@ export const SOLUTIONS_DATA = [
     alt: 'Data visualization icon',
     title: 'Data visualization',
     text: 'Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)',
-    link: AppRoutes.solutions,
+    link: Routes.SOLUTIONS,
   },
 ];
 
@@ -267,7 +267,7 @@ export const SERVICES_DATA = [
     alt: 'Machine learning icon',
     title: 'Machine learning',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
   {
     id: 2,
@@ -275,7 +275,7 @@ export const SERVICES_DATA = [
     alt: 'Embed analytics icon',
     title: 'Embed analytics',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
   {
     id: 3,
@@ -283,7 +283,7 @@ export const SERVICES_DATA = [
     alt: 'Access control icon',
     title: 'Access control',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
   {
     id: 4,
@@ -291,7 +291,7 @@ export const SERVICES_DATA = [
     alt: 'Data analytics icon',
     title: 'Data analytics',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
   {
     id: 5,
@@ -299,7 +299,7 @@ export const SERVICES_DATA = [
     alt: 'Big data consulting icon',
     title: 'Big data consulting',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
   {
     id: 6,
@@ -307,6 +307,6 @@ export const SERVICES_DATA = [
     alt: 'Artificial intelligence icon',
     title: 'Artificial intelligence',
     text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.',
-    link: AppRoutes.services,
+    link: Routes.SERVICES,
   },
 ];

@@ -1,7 +1,7 @@
 export enum SliderOptions {
-  defaultItemWidth = 0,
-  slidesPosition = 0,
-  slidesToShow = 3,
-  slidesToScroll = 1,
-  slidesGap = 30,
+  DEFAULT_ITEM_WIDTH = 0,
+  SLIDES_POSITION = 0,
+  SLIDES_TO_SHOW = 3,
+  SLIDES_TO_SCROLL = 1,
+  SLIDES_GAP = 30,
 }

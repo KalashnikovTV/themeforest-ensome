@@ -22,9 +22,9 @@ const Solutions: React.FC = () => {
       <TestimonialsBlock
         titleText="Testimonials"
         items={TESTIMONIALS_DATA}
-        slidesToShow={SliderOptions.slidesToShow}
-        slidesToScroll={SliderOptions.slidesToScroll}
-        slidesGap={SliderOptions.slidesGap}
+        slidesToShow={SliderOptions.SLIDES_TO_SHOW}
+        slidesToScroll={SliderOptions.SLIDES_TO_SCROLL}
+        slidesGap={SliderOptions.SLIDES_GAP}
       />
       <HelpBlock />
       <SubscribeBlock bgColor={theme.colors.secondary} />

@@ -32,7 +32,7 @@ const MapContainer: React.FC = () => {
 
   return (
     <>
-      {isLoading && <Loading width={50} height={50} margin="50px auto" />}
+      {isLoading && <Loading margin="50px auto" />}
       <Map
         onLoad={handleLoadMap}
         onRender={handleRenderMap}

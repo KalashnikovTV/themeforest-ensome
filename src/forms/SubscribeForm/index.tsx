@@ -1,12 +1,10 @@
 import { sendForm } from '@emailjs/browser';
-
 import { useFormik } from 'formik';
 import { useRef, useState } from 'react';
 
 import { showToast } from '@utils/showToast';
 
 import { defaultInitialValues as initialValues } from './constants';
-
 import { Wrapper, Form, InputWrapper, Button, Input, Span } from './styles';
 import { validationSchema } from './validationSchema';
 

@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 
 import Panel from '@components/Panel';
 import { ACCORDION_TAB_ACTIVE } from '@constants/accordion-options';
@@ -8,17 +8,30 @@ import { IAccordionProps } from './interfaces';
 import { Wrapper } from './styles';
 
 const Accordion: React.FC<IAccordionProps> = ({ panels }: IAccordionProps) => {
-  const [activeTab, setActiveTab] = useState(ACCORDION_TAB_ACTIVE);
+  const [activeTabs, setActiveTabs] = useState<number[]>([ACCORDION_TAB_ACTIVE]);
 
   const toggleTab = useCallback((index: number): void => {
-    setActiveTab((prev) => (prev === index ? -1 : index));
+    setActiveTabs((prevTabs) => {
+      if (prevTabs.includes(index)) {
+        return prevTabs.filter((tabIndex) => tabIndex !== index);
+      }
+
+      return [...prevTabs, index];
+    });
   }, []);
+
+  const isActiveTab = useMemo(
+    () =>
+      (index: number): boolean =>
+        activeTabs.includes(index),
+    [activeTabs]
+  );
 
   return (
     <Container>
       <Wrapper>
         {panels.map((panel, index) => (
-          <Panel key={index} activeTab={activeTab} index={index} toggleTab={toggleTab} {...panel} />
+          <Panel key={index} isActive={isActiveTab(index)} index={index} toggleTab={toggleTab} {...panel} />
         ))}
       </Wrapper>
     </Container>

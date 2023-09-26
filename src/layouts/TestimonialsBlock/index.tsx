@@ -1,13 +1,11 @@
 import { memo, ReactElement } from 'react';
 
 import Slider from '@components/Slider';
-
 import { ISliderRenderItemProps } from '@components/Slider/interfaces';
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 import { Container } from '@theme/theme';
 
 import { ITestimonialsBlockProps } from './interfaces';
-
 import {
   WrapperContent,
   Wrapper,
@@ -46,12 +44,12 @@ const TestimonialsBlock: React.FC<ITestimonialsBlockProps> = ({
             return (
               <SliderItem key={id} itemWidth={itemWidth}>
                 <SliderItemHeader>
-                  <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                  <SliderItemLink to={Routes.OUR_TEAM} title={`Go to ${Routes.OUR_TEAM}`}>
                     <SliderItemImage src={path} alt={alt} />
                   </SliderItemLink>
                   <SliderItemContent>
                     <SliderItemTitle>
-                      <SliderItemLink to={AppRoutes.ourTeam} title={`Go to ${AppRoutes.ourTeam}`}>
+                      <SliderItemLink to={Routes.OUR_TEAM} title={`Go to ${Routes.OUR_TEAM}`}>
                         {title}
                       </SliderItemLink>
                     </SliderItemTitle>

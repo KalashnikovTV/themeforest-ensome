@@ -1,10 +1,10 @@
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 
 export interface INavBarProps {
   routes?: {
     id: number;
     name: string;
-    path: AppRoutes;
+    path: Routes;
   }[];
   withMobileBurgerMenu?: boolean;
   $withMobileBurgerMenu?: boolean;

@@ -1,9 +1,9 @@
 import { Navigate, useParams } from 'react-router-dom';
 
 import LinkReadMore from '@components/LinkReadMore';
-import { AppRoutes } from '@constants/app-routes';
 import { useFilter } from '@hooks/useFilter';
 import { SERVICES_DATA } from '@mocks/data';
+import { Routes } from '@router/routes';
 import { Container } from '@theme/theme';
 
 import { Wrapper } from './styles';
@@ -14,7 +14,7 @@ const Service: React.FC = () => {
   const { activeItem, filteredItems } = useFilter(SERVICES_DATA, serviceId);
 
   if (!activeItem) {
-    return <Navigate to={AppRoutes.notFound} />;
+    return <Navigate to={Routes.NOT_FOUND} />;
   }
 
   const { id, path, alt, title, text } = activeItem;

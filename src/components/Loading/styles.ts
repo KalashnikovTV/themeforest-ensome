@@ -1,11 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 
-import { ILoadingProps } from './interfaces';
+import { ILoadingProps, IStyledWrapperProps } from './interfaces';
 
 const rotate = keyframes`
   to {
     transform: rotate(1turn);
   }
+`;
+
+export const Wrapper = styled('div')<IStyledWrapperProps>`
+  margin: ${({ margin }): string => margin as string};
+  text-align: center;
 `;
 
 export const Spinner = styled('div')<ILoadingProps>`
@@ -14,7 +19,7 @@ export const Spinner = styled('div')<ILoadingProps>`
   border-color: ${({ theme }): string => theme.colors.secondary};
   border-radius: ${({ theme }): number => theme.maxWidth[0] / 2}%;
   border-right-color: ${({ theme }): string => theme.colors.primary};
-  height: ${({ height }): number => height}px;
-  margin: ${({ theme, margin }): string => (margin ? margin : `${theme.spaces[0]}px auto`)};
-  width: ${({ width }): number => width}px;
+  display: inline-block;
+  height: ${({ height }): number => height as number}px;
+  width: ${({ width }): number => width as number}px;
 `;

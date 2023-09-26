@@ -1,4 +1,4 @@
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 import { Container } from '@theme/theme';
 
 import {
@@ -32,8 +32,8 @@ const PowerDataBlock: React.FC = () => {
             <LinkWrapper>
               <Border>
                 <LinkLearn
-                  to={AppRoutes.services}
-                  title={`Go to ${AppRoutes.services}`}
+                  to={Routes.SERVICES}
+                  title={`Go to ${Routes.SERVICES}`}
                   aria-label="Learn more about services"
                 >
                   Learn More

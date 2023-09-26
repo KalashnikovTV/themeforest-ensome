@@ -1,5 +1,4 @@
 import { PayPalButtons, PayPalButtonsComponentProps, usePayPalScriptReducer } from '@paypal/react-paypal-js';
-
 import { useEffect, useMemo, useState } from 'react';
 
 import Loading from '@components/Loading';
@@ -47,7 +46,7 @@ const PayPalButton: React.FC<IPayPalFormProps> = ({ price, description, onClose 
 
   return (
     <>
-      {isLoading && <Loading width={50} height={50} />}
+      {isLoading && <Loading />}
       <PayPalButtons {...buttonConfig} />
     </>
   );

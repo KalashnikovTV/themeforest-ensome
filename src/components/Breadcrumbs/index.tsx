@@ -1,14 +1,14 @@
 import { memo, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { AppRoutes } from '@constants/app-routes';
+import { Routes } from '@router/routes';
 
 import { IBreadcrumb, IBreadcrumbsProps } from './interfaces';
 import { Item, LinkBreadcrumb, List, Nav } from './styles';
 import { convertBreadcrumb } from './utils';
 
 const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
-  rootLabel = AppRoutes.home?.replace('/', ''),
+  rootLabel = Routes.HOME?.replace('/', ''),
   omitRootLabel = false,
   labelsToUppercase = true,
   replaceCharacterList = [{ from: '-', to: ' ' }],
@@ -44,8 +44,8 @@ const Breadcrumbs: React.FC<IBreadcrumbsProps> = ({
       <List>
         {!omitRootLabel && (
           <Item>
-            <LinkBreadcrumb to={AppRoutes.home} $isActiveItem={false}>
-              {convertBreadcrumb(rootLabel || AppRoutes.home?.slice(1), labelsToUppercase, replaceCharacterList)}
+            <LinkBreadcrumb to={Routes.HOME} $isActiveItem={false}>
+              {convertBreadcrumb(rootLabel || Routes.HOME?.slice(1), labelsToUppercase, replaceCharacterList)}
             </LinkBreadcrumb>
           </Item>
         )}
