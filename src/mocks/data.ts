@@ -3,7 +3,7 @@ import { Routes } from '@router/routes';
 export const TESTIMONIALS_DATA = [
   {
     id: 1,
-    path: '/images/testimonial-person-1.png',
+    path: '/images/testimonial-person-1.webp',
     alt: 'Sargis Grigor photo',
     title: 'Sargis Grigor',
     subtitle: 'CEO by PixelPerfect',
@@ -11,7 +11,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 2,
-    path: '/images/testimonial-person-2.png',
+    path: '/images/testimonial-person-2.webp',
     alt: 'Bagrat Leo photo',
     title: 'Bagrat Leo',
     subtitle: 'CEO by NOX',
@@ -19,7 +19,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 3,
-    path: '/images/testimonial-person-3.png',
+    path: '/images/testimonial-person-3.webp',
     alt: 'Gor Sargis photo',
     title: 'Gor Sargis',
     subtitle: 'Data analyst',
@@ -27,7 +27,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 4,
-    path: '/images/testimonial-person-4.png',
+    path: '/images/testimonial-person-4.webp',
     alt: 'Maral Mari photo',
     title: 'Maral Mari',
     subtitle: 'Data analyst',
@@ -35,7 +35,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 5,
-    path: '/images/testimonial-person-5.png',
+    path: '/images/testimonial-person-5.webp',
     alt: 'Hakob Jirair photo',
     title: 'Hakob Jirair',
     subtitle: 'Data engineer',
@@ -43,7 +43,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 6,
-    path: '/images/testimonial-person-6.png',
+    path: '/images/testimonial-person-6.webp',
     alt: 'Eva Vosgi photo',
     title: 'Eva Vosgi',
     subtitle: 'Data scientist',
@@ -51,7 +51,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 7,
-    path: '/images/testimonial-person-7.png',
+    path: '/images/testimonial-person-7.webp',
     alt: 'Kohar Marine photo',
     title: 'Kohar Marine',
     subtitle: 'Data scientist',
@@ -59,7 +59,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 8,
-    path: '/images/testimonial-person-8.png',
+    path: '/images/testimonial-person-8.webp',
     alt: 'Ararat Ohannes photo',
     title: 'Ararat Ohannes',
     subtitle: 'Data analyst',
@@ -67,7 +67,7 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 9,
-    path: '/images/testimonial-person-9.png',
+    path: '/images/testimonial-person-9.webp',
     alt: 'Eduard Vosgi photo',
     title: 'Eduard Vosgi',
     subtitle: 'Data scientist',
@@ -78,7 +78,7 @@ export const TESTIMONIALS_DATA = [
 export const BLOG_DATA = [
   {
     id: 1,
-    path: '/images/blog-news-1.png',
+    path: '/images/blog-news-1.webp',
     alt: 'ISO 13485 compliance of medical devices photo',
     title: 'ISO 13485 compliance of medical devices',
     subtitle: '22 June 2022',
@@ -86,7 +86,7 @@ export const BLOG_DATA = [
   },
   {
     id: 2,
-    path: '/images/blog-news-2.png',
+    path: '/images/blog-news-2.webp',
     alt: 'Business analysis helps you  in finance photo',
     title: 'Business analysis helps you  in finance',
     subtitle: '23 June 2022',
@@ -94,7 +94,7 @@ export const BLOG_DATA = [
   },
   {
     id: 3,
-    path: '/images/blog-news-3.png',
+    path: '/images/blog-news-3.webp',
     alt: '5 web portal examples your business can learn from photo',
     title: '5 web portal examples your business can learn from',
     subtitle: '24 June 2022',
@@ -103,7 +103,7 @@ export const BLOG_DATA = [
   // TODO поменять повт. данные ниже, когда будет страница Blog
   {
     id: 4,
-    path: '/images/blog-news-1.png',
+    path: '/images/blog-news-1.webp',
     alt: 'ISO 13485 compliance of medical devices photo',
     title: 'ISO 13485 compliance of medical devices',
     subtitle: '22 June 2022',
@@ -111,7 +111,7 @@ export const BLOG_DATA = [
   },
   {
     id: 5,
-    path: '/images/blog-news-2.png',
+    path: '/images/blog-news-2.webp',
     alt: 'Business analysis helps you  in finance photo',
     title: 'Business analysis helps you  in finance',
     subtitle: '23 June 2022',
@@ -119,7 +119,7 @@ export const BLOG_DATA = [
   },
   {
     id: 6,
-    path: '/images/blog-news-3.png',
+    path: '/images/blog-news-3.webp',
     alt: '5 web portal examples your business can learn from photo',
     title: '5 web portal examples your business can learn from',
     subtitle: '24 June 2022',
