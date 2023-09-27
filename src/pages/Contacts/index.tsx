@@ -17,4 +17,6 @@ const Contacts: React.FC = () => {
   );
 };
 
+Contacts.displayName = 'Contacts';
+
 export default Contacts;

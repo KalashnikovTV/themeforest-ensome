@@ -16,6 +16,7 @@
       "@router/*": ["./src/router/*"],
       "@forms/*": ["./src/forms/*"],
       "@interfaces/*": ["./src/interfaces/*"],
+      "@hoc/*": ["./src/hoc/*"],
     }
   }
 }

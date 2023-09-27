@@ -8,4 +8,6 @@ const AboutUs: React.FC = () => {
   );
 };
 
+AboutUs.displayName = 'AboutUs';
+
 export default AboutUs;

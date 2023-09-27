@@ -21,6 +21,7 @@ module.exports = {
       '@router': path.resolve(__dirname, 'src/router'),
       '@forms': path.resolve(__dirname, 'src/forms'),
       '@interfaces': path.resolve(__dirname, 'src/interfaces'),
+      '@hoc': path.resolve(__dirname, 'src/hoc'),
     },
   },
   babel: {

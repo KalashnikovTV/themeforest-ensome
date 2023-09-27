@@ -43,4 +43,6 @@ const Blog: React.FC = () => {
   );
 };
 
+Blog.displayName = 'Blog';
+
 export default Blog;

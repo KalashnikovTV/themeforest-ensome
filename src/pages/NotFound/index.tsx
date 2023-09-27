@@ -24,4 +24,6 @@ const NotFound: React.FC = () => {
   );
 };
 
+NotFound.displayName = 'NotFound';
+
 export default NotFound;

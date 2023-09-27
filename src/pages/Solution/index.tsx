@@ -47,4 +47,6 @@ const Solution: React.FC = () => {
   );
 };
 
+Solution.displayName = 'Solution';
+
 export default Solution;

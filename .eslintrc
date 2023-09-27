@@ -52,12 +52,19 @@
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "error"
       }
+    },
+    {
+      "files": ["**/pages/**/*.tsx"],
+      "rules": {
+        "react/display-name": ["error", { "ignoreTranspilerName": true }]
+      }
     }
   ],
   "rules": {
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
+    "react/display-name": ["error", { "ignoreTranspilerName": false }],
     "better-styled-components/sort-declarations-alphabetically": 2,
     "import/order": [
       "error",

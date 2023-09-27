@@ -21,4 +21,6 @@ const FaQs: React.FC = () => {
   );
 };
 
+FaQs.displayName = 'FaQs';
+
 export default FaQs;

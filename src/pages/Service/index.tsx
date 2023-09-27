@@ -47,4 +47,6 @@ const Service: React.FC = () => {
   );
 };
 
+Service.displayName = 'Service';
+
 export default Service;
