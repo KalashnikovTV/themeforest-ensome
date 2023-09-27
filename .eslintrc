@@ -54,7 +54,7 @@
       }
     },
     {
-      "files": ["**/pages/**/*.tsx"],
+      "files": ["**/pages/**/*.tsx", "**/pages/**/*.jsx"],
       "rules": {
         "react/display-name": ["error", { "ignoreTranspilerName": true }]
       }
