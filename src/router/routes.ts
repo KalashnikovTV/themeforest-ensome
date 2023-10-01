@@ -1,5 +1,7 @@
 export enum Routes {
-  HOME = '/home',
+  ALL = '*',
+  ROOT = '/',
+  HOME = '',
   SERVICES = '/services',
   ABOUT_US = '/about-us',
   BLOG = '/blog',
