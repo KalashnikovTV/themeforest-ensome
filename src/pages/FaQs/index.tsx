@@ -6,6 +6,7 @@ import { FAQ_ACCORDION_DATA } from '@mocks/data';
 import { theme } from '@theme/theme';
 
 const FaQs: React.FC = () => {
+  throw new Error('dd');
   return (
     <>
       <PageHeaderBlock
