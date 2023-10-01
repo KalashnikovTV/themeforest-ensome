@@ -12,10 +12,6 @@ const ErrorFallback: React.FC<IErrorBoundaryState> = ({ error }: IErrorBoundaryS
   const handleOnClick = (): void => {
     const nextPage = window.history.length <= 1 ? Routes.HOME : -1;
     navigate(nextPage.toString());
-
-    setTimeout(() => {
-      window.location.reload();
-    }, 700);
   };
 
   return (
