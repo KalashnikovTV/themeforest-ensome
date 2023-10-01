@@ -7,6 +7,7 @@ import { theme } from '@theme/theme';
 
 const FaQs: React.FC = () => {
   throw new Error('dd');
+
   return (
     <>
       <PageHeaderBlock

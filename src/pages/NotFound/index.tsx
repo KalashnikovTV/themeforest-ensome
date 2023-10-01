@@ -9,14 +9,7 @@ const NotFound: React.FC = () => {
   const navigate = useNavigate();
 
   const handleOnClick = (): void => {
-    console.log(window.history.length);
-    if (window.history.length <= 1) {
-      navigate(Routes.HOME);
-      return;
-    }
-    console.log('test');
-    // const nextPage = window.history.length <= 1 ? Routes.HOME : -1;
-    navigate(-1);
+    navigate(Routes.HOME);
   };
 
   return (
@@ -26,7 +19,7 @@ const NotFound: React.FC = () => {
         <Paragraph>
           <Span>Ooops!</Span> Such page is not found..
         </Paragraph>
-        <Button onClick={handleOnClick}>Click to return to the previous page...</Button>
+        <Button onClick={handleOnClick}>Click to return to the Home page..</Button>
       </Wrapper>
     </Container>
   );
