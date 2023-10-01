@@ -2,17 +2,16 @@ import { useNavigate } from 'react-router-dom';
 
 import { IErrorBoundaryState } from '@components/ErrorBoundary/interfaces';
 
+import { Routes } from '@router/routes';
+
 import { Wrapper, Button, Title, CodeMessage } from './styles';
 
 const ErrorFallback: React.FC<IErrorBoundaryState> = ({ error }: IErrorBoundaryState) => {
   const navigate = useNavigate();
 
   const handleOnClick = (): void => {
-    navigate(-1);
-
-    setTimeout(() => {
-      window.location.reload();
-    }, 700);
+    const nextPage = window.history.length <= 1 ? Routes.HOME : -1;
+    navigate(nextPage.toString());
   };
 
   return (
