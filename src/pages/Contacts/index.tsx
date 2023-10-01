@@ -3,14 +3,18 @@ import MapContainer from '@components/MapContainer';
 import HelpContactBlock from '@layouts/HelpContactBlock';
 import { Container } from '@theme/theme';
 
+import { WrapperBreadcrumbs } from './styles';
+
 const subtitle = 'Contacts';
 
 const Contacts: React.FC = () => {
   return (
     <>
-      <Container>
-        <Breadcrumbs transformLastLabel={(): string => subtitle} omitIndexList={null} />
-      </Container>
+      <WrapperBreadcrumbs>
+        <Container>
+          <Breadcrumbs transformLastLabel={(): string => subtitle} omitIndexList={null} />
+        </Container>
+      </WrapperBreadcrumbs>
       <HelpContactBlock />
       <MapContainer />
     </>

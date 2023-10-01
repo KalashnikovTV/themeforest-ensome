@@ -23,7 +23,7 @@ const AppRouter: React.FC = () => {
     <Content>
       <ScrollToTop />
       <Router>
-        <Route path={Routes.ROOT} element={<MainLayout />}>
+        <Route path={Routes.HOME} element={<MainLayout />}>
           <Route path={Routes.HOME} element={<Suspense component={Home} />} />;
           <Route path={Routes.BLOG} element={<Suspense component={Blogs} />} />;
           <Route path={`${Routes.BLOG}/:id`} element={<Suspense component={Blog} />} />;
