@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 
 import AppRouter from '@components/AppRouter';
 import ErrorBoundary from '@components/ErrorBoundary';
-import ErrorFallback from '@components/ErrorFallback';
 import GlobalStyles from '@theme/globalStyles';
 import { theme } from '@theme/theme';
 
@@ -14,7 +13,7 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <ToastContainer />
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <ErrorBoundary>
           <AppRouter />
         </ErrorBoundary>
       </ThemeProvider>

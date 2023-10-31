@@ -1,5 +1,7 @@
 import { Component, ReactNode } from 'react';
 
+import ErrorFallback from '@components/ErrorFallback';
+
 import { IErrorBoundaryProps, IErrorBoundaryState } from './interfaces';
 
 export default class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> {
@@ -13,10 +15,10 @@ export default class ErrorBoundary extends Component<IErrorBoundaryProps, IError
 
   public render(): ReactNode {
     const { error } = this.state;
-    const { children, FallbackComponent } = this.props;
+    const { children } = this.props;
 
     if (error) {
-      return <FallbackComponent error={error} />;
+      return <ErrorFallback error={error} />;
     }
 
     return children;
